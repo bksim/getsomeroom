@@ -86,12 +86,12 @@ $app_name = idx($app_info, 'name', '');
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
     <!--<title><?php echo he($app_name); ?></title>-->
-    <link href="stylesheets/bootstrap-responsive.min.css" />
-    <link href="stylesheets/bootstrap.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
     <link rel="stylesheet" href="stylesheets/login.css" />
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="stylesheets/bootstrap-responsive.min.css" />
 
     <!--[if IEMobile]>
     <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
@@ -218,6 +218,7 @@ $app_name = idx($app_info, 'name', '');
     <header class="clearfix">
     </header>
       <?php if (isset($basic)) { ?>
+
       <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">

@@ -230,7 +230,10 @@ $app_name = idx($app_info, 'name', '');
 
       <?php
 
-      echo $basic;
+      foreach ($basic as $value){
+        echo $value;
+        echo "<br/>";
+      }
       # This function reads your DATABASE_URL configuration automatically set by Heroku
       # the return value is a string that will work with pg_connect
       function pg_connection_string() {

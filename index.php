@@ -275,21 +275,17 @@ $app_name = idx($app_info, 'name', '');
             <a class="brand" href="/">get a room</a>
             <div class="nav-collapse collapse">
               <p class="navbar-text pull-right">
-                <li class="dropdown open">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <?php echo $basic['name'];?>
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#"Logout</a>
-                    </li>
-                  </ul>
-                </li>
                 <?php
                   $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
                 ?>
-                &#160;&#160;&#160;<img src="<? echo $pictureurl; ?>" width="35" height="35">
+                <img src="<? echo $pictureurl; ?>" width="35" height="35">&#160;&#160;&#160;
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Logout</a></li>
+                  </ul>
+                </li>
               </p>
               <ul class="nav">
                 <li><a href="#matches">matches</a></li>

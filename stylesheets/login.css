@@ -6,7 +6,7 @@
 }
 
 html, body {
-	background-image:url(images/newyork.jpg);
+	background-image:url(../images/newyork.jpg);
 	background-size:cover;
 	background-attachment:fixed;
 }

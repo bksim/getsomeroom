@@ -212,7 +212,8 @@ $app_name = idx($app_info, 'name', '');
     </script>
 
     <div>
-    <!--<header class="clearfix">-->
+    <header class="clearfix">
+    </header>
       <?php if (isset($basic)) { ?>
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
@@ -279,7 +280,6 @@ $app_name = idx($app_info, 'name', '');
         
       </div>
       <?php } ?>
-    <!--</header>-->
   </div>
 
     <!--<section id="get-started">

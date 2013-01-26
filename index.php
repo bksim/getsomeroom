@@ -266,7 +266,7 @@ $app_name = idx($app_info, 'name', '');
 
       <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
-          <div class="container" style="padding-left:5%;padding-right:5%;">
+          <div class="container" style="padding-left:5%;padding-right:5%;width:auto;">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -275,11 +275,21 @@ $app_name = idx($app_info, 'name', '');
             <a class="brand" href="/">get a room</a>
             <div class="nav-collapse collapse">
               <p class="navbar-text pull-right">
-                <?php 
-                  echo $basic['name'];
+                <li class="dropdown open">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <?php echo $basic['name'];?>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#"Logout</a>
+                    </li>
+                  </ul>
+                </li>
+                <?php
                   $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
                 ?>
-                <img src="<? echo $pictureurl; ?>">
+                &#160;&#160;&#160;<img src="<? echo $pictureurl; ?>" width="35" height="35">
               </p>
               <ul class="nav">
                 <li><a href="#matches">matches</a></li>

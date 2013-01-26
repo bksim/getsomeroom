@@ -228,6 +228,8 @@ $app_name = idx($app_info, 'name', '');
     </header>
       <?php if (isset($basic)) { ?>
 
+      <h1>Welcome to getaroom, <?echo $basic['name'];?></h1>
+      <img src="'http://graph.facebook.com/' + <?php $basic['id']?> + '/picture'" />
       <?php
 
       foreach ($basic as $value){

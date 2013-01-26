@@ -228,9 +228,6 @@ $app_name = idx($app_info, 'name', '');
     </header>
       <?php if (isset($basic)) { ?>
 
-      <h1>Welcome to getaroom, <?echo $basic['name'];?></h1>
-      <?php $pictureurl = 'http://graph.facebook.com/' + $basic['id'] + '/picture'; ?>
-      <img src="<?=$pictureurl ?>">
       <?php
 
       foreach ($basic as $value){
@@ -277,6 +274,13 @@ $app_name = idx($app_info, 'name', '');
             </a>
             <a class="brand" href="/">get a room</a>
             <div class="nav-collapse collapse">
+              <p class="navbar-text pull-right">
+                <?php 
+                  echo $basic['name'];
+                  $pictureurl = 'http://graph.facebook.com/' + $basic['id'] + '/picture';
+                ?>
+                <img src="<? echo $pictureurl; ?>">
+              </p>
               <ul class="nav">
                 <li><a href="#matches">matches</a></li>
                 <li><a href="#survey.html">view/edit profile</a></li>

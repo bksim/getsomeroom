@@ -277,7 +277,7 @@ $app_name = idx($app_info, 'name', '');
               <p class="navbar-text pull-right">
                 <?php 
                   echo $basic['name'];
-                  $pictureurl = 'http://graph.facebook.com/' + $basic['id'] + '/picture';
+                  $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
                 ?>
                 <img src="<? echo $pictureurl; ?>">
               </p>

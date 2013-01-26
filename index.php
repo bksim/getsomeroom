@@ -213,7 +213,7 @@ $app_name = idx($app_info, 'name', '');
     pg_free_result($result);       
 
     // close connection
-    pg_close($dbh);
+    pg_close($db);
 
     ?>
 

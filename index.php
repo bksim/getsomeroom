@@ -240,7 +240,7 @@ $app_name = idx($app_info, 'name', '');
       /*if (!$db) {
          echo "Database connection error."
          //exit;
-      }
+      }*/
       $sqlcommand = "SELECT * FROM users";
       $result = pg_query($db, $sqlcommand);
       if (!$result) {
@@ -258,7 +258,7 @@ $app_name = idx($app_info, 'name', '');
       pg_free_result($result);       
 
       // close connection
-      pg_close($db);*/
+      pg_close($db);
 
       ?>
 

@@ -235,11 +235,12 @@ $app_name = idx($app_info, 'name', '');
         return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
       }
       # Establish db connection
+      echo "hi is this working??????????????";
       $db = pg_connect(pg_connection_string());
-      if (!$db) {
+      /*if (!$db) {
          echo "Database connection error."
          //exit;
-      }/*
+      }
       $sqlcommand = "SELECT * FROM users";
       $result = pg_query($db, $sqlcommand);
       if (!$result) {

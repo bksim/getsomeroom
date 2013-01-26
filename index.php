@@ -211,7 +211,8 @@ $app_name = idx($app_info, 'name', '');
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <header class="clearfix">
+    <div>
+    <!--<header class="clearfix">-->
       <?php if (isset($basic)) { ?>
       <p id="picture" style="background-image: url(https://graph.facebook.com/<?php echo he($user_id); ?>/picture?type=normal)"></p>
 
@@ -245,11 +246,7 @@ $app_name = idx($app_info, 'name', '');
       </div>
       <?php } else { ?>
       <div>
-        <h1>Welcome</h1>
-
-
-
-
+        <!-- added -->
         <div id="logincontainer">
               <div id="loginbox">
                 <h1 id="aTitle">get some room.</h1>
@@ -272,6 +269,8 @@ $app_name = idx($app_info, 'name', '');
                 <!-- AddThis Button END -->
           </div>
         </div>
+      </div>
+    </div>
 
 
 
@@ -280,7 +279,8 @@ $app_name = idx($app_info, 'name', '');
         
       </div>
       <?php } ?>
-    </header>
+    <!--</header>-->
+  </div>
 
     <!--<section id="get-started">
       <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>

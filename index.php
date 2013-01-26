@@ -111,6 +111,7 @@ $app_name = idx($app_info, 'name', '');
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
     <script type="text/javascript" src="/javascript/jquery-1.7.1.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
 
     <script type="text/javascript">
       function logResponse(response) {

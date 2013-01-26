@@ -191,12 +191,12 @@ $app_name = idx($app_info, 'name', '');
       return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
     }
     # Establish db connection
-    $db = pg_connect(pg_connection_string());
+    /*$db = pg_connect(pg_connection_string());
     if (!$db) {
        echo "Database connection error."
        exit;
     }
-    //$result = pg_query($db, "SELECT statement goes here");
+    $result = pg_query($db, "SELECT statement goes here");*/
     ?>
 
   </head>

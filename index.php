@@ -85,9 +85,11 @@ $app_name = idx($app_info, 'name', '');
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
-    <title><?php echo he($app_name); ?></title>
+    <!--<title><?php echo he($app_name); ?></title>-->
+    <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/login.css" />
 
     <!--[if IEMobile]>
     <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
@@ -244,7 +246,38 @@ $app_name = idx($app_info, 'name', '');
       <?php } else { ?>
       <div>
         <h1>Welcome</h1>
-        <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+
+
+
+
+        <div id="logincontainer">
+              <div id="loginbox">
+                <h1 id="aTitle">get some room.</h1>
+                <br>
+                <h2 id="caption">find an awesome internship but need roommates?</h2>
+                <p id="tagline">Enter to find your best roommate matches.</p>
+                <!-- AddThis Button BEGIN -->
+                <div id="login-flow" style="padding-left:30px;">
+                  <!-- <fb:login-button size="xlarge" perms="email,offline_access" show-faces="false" onlogin="Log.info('onlogin callback')" style="font-family:'Franklin Gothic Medium' background-color:#00009C;">
+                    Sign Up With Facebook</fb:login-button> -->
+                    <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+                    <!--<a href="#" onclick="oauth_login_url;"><img src="images/facebooklogin.jpg" border="0" alt=""></a> -->
+                </div>
+                <div class="addthis_toolbox addthis_default_style " style="margin:0 auto;margin-top:20px;width:155px;">
+                  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                  <a class="addthis_button_tweet" style="width:69px;"></a>
+                </div>
+                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50552bd1589c29ce"></script>
+                <!-- AddThis Button END -->
+          </div>
+        </div>
+
+
+
+
+
+        
       </div>
       <?php } ?>
     </header>

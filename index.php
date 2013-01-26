@@ -196,7 +196,7 @@ $app_name = idx($app_info, 'name', '');
        echo "Database connection error."
        exit;
     }
-    $result = pg_query($db, "SELECT statement goes here");
+    //$result = pg_query($db, "SELECT statement goes here");
     ?>
 
   </head>

@@ -93,6 +93,13 @@ $app_name = idx($app_info, 'name', '');
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="stylesheets/bootstrap-responsive.min.css" />
 
+
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    
     <!--[if IEMobile]>
     <link rel="stylesheet" href="mobile.css" media="screen" type="text/css"  />
     <![endif]-->

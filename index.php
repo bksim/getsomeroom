@@ -274,6 +274,13 @@ $app_name = idx($app_info, 'name', '');
             </a>
             <a class="brand" href="/">get a room</a>
             <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="#matches">matches</a></li>
+                <li><a href="#survey.html">view/edit profile</a></li>
+                <li><a href="#about.html">about</a></li>
+                <li><a href="#faq.html">faq</a></li>
+              </ul>
+
               <p class="navbar-text pull-right">
                 <?php
                   $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
@@ -287,12 +294,7 @@ $app_name = idx($app_info, 'name', '');
                   </ul>
                 </li>
               </p>
-              <ul class="nav">
-                <li><a href="#matches">matches</a></li>
-                <li><a href="#survey.html">view/edit profile</a></li>
-                <li><a href="#about.html">about</a></li>
-                <li><a href="#faq.html">faq</a></li>
-              </ul>
+
             </div><!--/.nav-collapse -->
           </div>
         </div>

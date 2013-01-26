@@ -55,10 +55,10 @@ html, body {
 	padding:20px;
 	border-radius:30px;
 	background-color:rgba(255,255,255,.8);
-	background-image:url(http://subtlepatterns.com/patterns/crisp_paper_ruffles.png);
+	background-image:url(../images/crisp_paper_ruffles.png);
 	
 	color:#eee;
-	background: url(http://launchrock.com/images/boxtile.png) repeat;
+	background: url(../images/boxtile.png) repeat;
 	border: 1px solid rgba(90, 90, 90, 0.7);
 	position: relative;
 	margin: 0 auto 40px auto;

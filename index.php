@@ -124,7 +124,7 @@ $app_name = idx($app_info, 'name', '');
     <script type="text/javascript">                                         
       $(function(){
         $("a[rel='tab']").click(function(e){
-          e.preventDefault();
+          //e.preventDefault();
           //get clicked link location
           pageurl = $(this).attr('href');
           alert(pageurl);
@@ -312,8 +312,8 @@ $app_name = idx($app_info, 'name', '');
             <ul class="nav">
               <li><a href="matches.php" rel="tab">matches</a></li>
               <li><a href="survey.php" rel="tab">view/edit profile</a></li>
-              <li><a href="about.html" rel="tab">about</a></li>
-              <li><a href="faq.html" rel="tab">faq</a></li>
+              <li><a href="about.php" rel="tab">about</a></li>
+              <li><a href="faq.php" rel="tab">faq</a></li>
             </ul>
 
 

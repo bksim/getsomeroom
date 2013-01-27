@@ -1,6 +1,6 @@
-	<?php
-	$basic2 = $facebook->api('/me');
-	echo $basic2['id']; ?>
+<script>FB.api('/me', function(response) {
+  alert('Your name is ' + response.name);
+});</script>
 
 	<form action="submit.php" method=post class="form-horizontal">
 		<input type="hidden" name="fbid" value="<?php echo $basic['id'];?>">

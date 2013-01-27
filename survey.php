@@ -1,4 +1,4 @@
-	 <?php
+	 <?php/*
 	$college = $_POST['inputCollege']; // required
     $cityIntern = $_POST['inputCity']; // required
     $specificPartCity = $_POST['partCity'] //required
@@ -14,9 +14,9 @@
     $checkItemSmoke = $_POST['optionscheckboxs3'];
     $quiet = FALSE; //change later
     $nightowl = FALSE;
-    $morningbird = FALSE;
+    $morningbird = FALSE;*/
 /*
-    if ($cityIntern = "yes") {
+    if ($cityIntern == "yes") {
     	$cityIntern = TRUE;
     }
     else{

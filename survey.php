@@ -15,12 +15,33 @@
 	      <input type="text" name="inputCollege" placeholder="">
 	    </div>
 	  </div
+ <div class="control-group">
+	  <select>
+  		<option>1</option>
+  		<option>2</option>
+  		<option>3</option>
+  		<option>4</option>
+  		<option>5</option>
+	</select>
+</div>
+ 
 	  <div class="control-group">
-	    <label class="control-label" for="inputCity">city interning in:</label>
-	    <div class="controls">
-	      <input type="text" name="inputCity" placeholder="">
-	    </div>
-	  </div>
+ 		<label class="control-label" for="inputCity">Select the city you will be interning in. If the city isn't there, please select "other":</label>
+ 	<div class="controls">
+	  <select>
+  		<option id="NY">New York, NY</option>
+  		<option id="SF">San Francisco, CA</option>
+  		<option id="Paly">Palo Alto, CA</option>
+  		<option id="CBRIDGE">Cambridge, MA</option>
+  		<option id="BOS">Boston, MA</option>
+  		<option id="Philly">Philadelphia, PA</option>
+  		<option id="Chic">Chicago, IL</option>
+  		<option id="Shang">Shanghai, China</option>
+  		<option id="HK">Hong Kong, HK</option>
+  		<option id="other">Other</option>
+			</select>
+		</div>
+	</div>
 
 	  <div class="control-group">
 	    <label class="control-label" for="partCity">part of city (for ex: Uptown)</label>

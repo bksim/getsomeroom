@@ -52,7 +52,25 @@
     	'$checkItemSmoke',
     	'$quiet',
     	'$nightowl',
-    	'$morningbird')";
+    	'$morningbird')
+        ON DUPLICATE UPDATE
+            college='$college',
+            cityIntern='$cityIntern',
+            specificPartCity='$specificPartCity',
+            genderPref='$genderPref',
+            foundHousing = '$foundHousing',
+            housingPref = '$housingPref',
+            company = '$company',
+            internJob = '$internJob',
+            moreInfo = '$moreInfo',
+            checkItemCook = '$checkItemCook',
+            checkItemParty = '$checkItemParty',
+            checkItemSmoke = '$checkItemSmoke',
+            checkItemQuiet = '$quiet',
+            checkItemNightOwl = '$nightowl',
+            checkItemMorningBird = '$morningbird'
+            ";
+
 
 
     $result = pg_query($db, $query_insert);

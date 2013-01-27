@@ -15,6 +15,14 @@ html, body {
 	padding-top:75px;
 }
 
+#loginbox{
+  position:absolute;
+  width:34%;
+  height:34%;
+  top:33%;
+  left:33%;
+}
+
 .form {
 	border-radius:4px;
 	font-size:14px;

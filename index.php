@@ -136,6 +136,8 @@ $app_name = idx($app_info, 'name', '');
 
           //change browser URL to given link location
           if(pageurl!=window.location){
+            alert(pageurl);
+            
             window.history.pushState({path:pageurl},'',pageurl);
           }
 

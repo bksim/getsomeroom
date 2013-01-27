@@ -1,5 +1,5 @@
 	 <?php
-	$college = $_POST['inputCollege']; // required
+	/*$college = $_POST['inputCollege']; // required
     $cityIntern = $_POST['inputCity']; // required
     $genderPref = $_POST['inputGender']; // required
     $foundHousing = $_POST['inputFound']; // required
@@ -44,7 +44,7 @@
     pg_free_result($result);
 
     // close connection
-    pg_close($db);
+    pg_close($db);*/
 
     ?>
 
@@ -97,15 +97,15 @@
 
  
 	<label class="checkbox" style="margin-left: 170px">
-  <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs1" value="option1" checked>
+  <input type="checkbox" name="optionscheckboxs1" id="optionscheckboxs1" value="option1" checked>
   I love people who cook
 	</label>
 	<label class="checkbox" style="margin-left: 170px">
-  <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs2" value="option2">
+  <input type="checkbox" name="optionscheckboxs2" id="optionscheckboxs2" value="option2">
   Brandon sucks
 	</label>
 	<label class="checkbox" style="margin-left: 170px">
-  <input type="checkbox" name="optionscheckboxs" id="optionscheckboxs2" value="option2">
+  <input type="checkbox" name="optionscheckboxs3" id="optionscheckboxs2" value="option2">
   Ava is awesome
 	</label>
 	  <div class="control-group">

@@ -15,11 +15,11 @@ body {
   margin: 20px;
 }
 
-a:link, a:visited {
+/*a:link, a:visited {
   color: #3b5998;
-  /*font-weight: bold;*/
+  /*font-weight: bold;
   text-decoration: none;
-}
+}*/
 
 a:hover, a:active {
   text-decoration: underline;

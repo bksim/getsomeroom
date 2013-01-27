@@ -31,7 +31,8 @@
     }*/
     # Establish db connection
     //$db = pg_connect(pg_connection_string());
-    $dbc = pg_connect("dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require");
+    
+    /*$dbc = pg_connect("dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require");
     #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
 
     $query_insert = "INSERT INTO users VALUES (1,
@@ -57,15 +58,15 @@
 	 var_dump($query_insert);
 
     $result = pg_query($dbc, $rq);
-    
-    /*if (!$result) {
+
+    if (!$result) {
       die("Error in SQL query: " . pg_last_error());
-    }*/
+    }
     // free memory
     pg_free_result($result);
 
     // close connection
-    pg_close($dbc);
+    pg_close($dbc);*/
 
     ?>
 

@@ -3,15 +3,7 @@
 	#content {clear: both; background: url(content-bg.png) top center repeat-y;}
 		#mast-head-main {width: 950px; height: 350px; margin: 0 auto 45px auto; position: relative;}*/
 			#masthead {
-
-				background: url(../images/newyork.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-attachment:fixed;
-
-				/*position:absolute; 
+				position:absolute; 
 				top:0;
 				left:0;
 				bottom:0;

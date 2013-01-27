@@ -301,6 +301,38 @@ $app_name = idx($app_info, 'name', '');
 
       </div>
       <?php } else { ?>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+      <script language="JavaScript" type="text/javascript">
+      $(document).ready(function(){
+ 
+      var imgArr = new Array( // relative paths of images
+    '../images/newyork.jpg',
+    '../images/shanghai.jpg',
+    '../images/sanfrancisco.jpg',
+    '../images/hongkong.jpg'
+      );
+ 
+    var preloadArr = new Array();
+    var i;
+ 
+ /* preload images */
+    for(i=0; i < imgArr.length; i++){
+    preloadArr[i] = new Image();
+    preloadArr[i].src = imgArr[i];
+    }
+ 
+    var currImg = 1;
+    var intID = setInterval(changeImg, 6000);
+ 
+ /* image rotator */
+    function changeImg(){
+    $('#masthead').animate({opacity: 0}, 1000, function(){
+    $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
+    }).animate({opacity: 1}, 1000);
+    }
+ 
+ });
+</script>
       <div>
         <!-- added -->
         <div id="logincontainer">

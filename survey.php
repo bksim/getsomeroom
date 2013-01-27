@@ -52,6 +52,8 @@
     	$nightowl,
     	$morningbird)";
 
+	 var_dump($query_insert);
+
     $result = pg_query($db, $query_insert);
     if (!$result) {
       die("Error in SQL query: " . pg_last_error());

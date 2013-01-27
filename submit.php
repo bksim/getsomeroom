@@ -28,7 +28,7 @@
     if (!isset($checkItemNightOwl)) $checkItemNightOwl = "f";
 
     $checkItemMorningBird = $_POST['checkBox6'];
-    if (!isset($checkItemNightOwl)) $checkItemNightOwl = "f";
+    if (!isset($checkItemMorningBird)) $checkItemMorningBird = "f";
 
     # This function reads your DATABASE_URL configuration automatically set by Heroku
     # the return value is a string that will work with pg_connect

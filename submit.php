@@ -1,4 +1,4 @@
-	 <?php
+<?php
 	$college = $_POST['inputCollege']; 
     $cityIntern = $_POST['inputCity'];
     $specificPartCity = $_POST['partCity'] 
@@ -36,6 +36,7 @@
     # Establish db connection
     $db = pg_connect(pg_connection_string());
     
+    /*
         #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
     $query_insert = "INSERT INTO users VALUES (5,
     	'Chang',
@@ -65,5 +66,5 @@
     pg_free_result($result);
 
     // close connection
-    pg_close($db);
+    pg_close($db);*/
     ?>

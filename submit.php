@@ -4,7 +4,7 @@
     $specificPartCity = $_POST['partCity']; 
     $genderPref = $_POST['inputGender']; 
     //$foundHousing = $_POST['inputFound'];
-    $foundHousing = FALSE;
+    $foundHousing = "f";
     $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required
@@ -13,18 +13,18 @@
     $checkItemParty = $_POST['optionscheckboxs2'];//required
     $checkItemSmoke = $_POST['optionscheckboxs3'];*/
 
-    $checkItemCook = FALSE;
-    $checkItemParty = FALSE;
-    $checkItemSmoke = FALSE;
-    $quiet = FALSE; //change later
-    $nightowl = FALSE;
-    $morningbird = FALSE;
+    $checkItemCook = 'f';
+    $checkItemParty = 'f';
+    $checkItemSmoke = 'f';
+    $quiet = 'f'; //change later
+    $nightowl = 'f';
+    $morningbird = 'f';
 
     if ($cityIntern == "yes") {
-    	$cityIntern = TRUE;
+    	$cityIntern = 't';
     }
     else{
-    	$cityIntern = FALSE;
+    	$cityIntern = 'f';
     }
 
 
@@ -44,17 +44,17 @@
     	'$college',
     	'$cityIntern',
     	'$specificPartCity',
-    	'$genderPref', " . 
-    	$foundHousing . ",
+    	'$genderPref',
+    	'$foundHousing',
     	'$housingPref',
     	'$company',
     	'$internJob',
-    	'$moreInfo', " . 
-    	$checkItemParty . ", " . 
-    	$checkItemSmoke . ", " . 
-    	$quiet . ", " . 
-    	$nightowl ", " . 
-    	$morningbird . ")";
+    	'$moreInfo', 
+    	'$checkItemParty', 
+    	'$checkItemSmoke',
+    	'$quiet',
+    	'$nightowl',
+    	'$morningbird')";
 
 
     $result = pg_query($db, $query_insert);

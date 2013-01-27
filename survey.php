@@ -32,19 +32,26 @@
     $db = pg_connect(pg_connection_string());
 
     #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
-    $sqlcommand = "INSERT INTO users VALUES (1, 
-    	'Chang', 
-    	'Ava', '" . $college . "', '" . $cityIntern . "', '" .  $specificPartCity . "', '" .  $genderPref . "', " . 
-	$foundHousing . ", '" .  
-	$housingPref . "', '" .  
-	$company . "', '" .  
-	$internJob . "', '" .  
-	$moreInfo . "', " .  
-	$checkItemCook . ", " .  
-	$checkItemParty . ", " .  
-	$checkItemSmoke . ", " . $quiet . ", " . $nightowl . ", " . $morningbird . ")";
 
-    $result = pg_query($db, $sqlcommand);
+    $query_insert = "INSERT INTO users VALUES (1,
+    	'Chang',
+    	'Ava',
+    	'$college',
+    	'$cityIntern',
+    	'$specificPartCity',
+    	'$genderPref',
+    	$foundHousing,
+    	'$housingPref',
+    	'$company',
+    	'$internJob',
+    	'$moreInfo',
+    	$checkItemParty,
+    	$checkItemSmoke,
+    	$quiet,
+    	$nightowl,
+    	$morningbird)";
+
+    $result = pg_query($db, $query_insert);
     if (!$result) {
       die("Error in SQL query: " . pg_last_error());
     }

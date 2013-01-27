@@ -86,7 +86,7 @@ $app_name = idx($app_info, 'name', '');
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
     <!--<title><?php echo he($app_name); ?></title>-->
-    <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="stylesheets/screen.css" media="Screen" type="text/css" />
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" type="text/css" />
     <link rel="stylesheet" href="stylesheets/login.css" />
@@ -118,7 +118,7 @@ $app_name = idx($app_info, 'name', '');
     <meta property="og:description" content="My first app" />
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script> 
     <script src="javascript/bootstrap.min.js"></script>
 
     <!-- HANDLE NAV BAR NAVIGATION USING AJAX CALLS, HTML5-COMPLIANT-->

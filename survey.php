@@ -15,13 +15,13 @@
     $quiet = FALSE; //change later
     $nightowl = FALSE;
     $morningbird = FALSE;
-
+/*
     if ($cityIntern = "yes") {
     	$cityIntern = TRUE;
     }
     else{
     	$cityIntern = FALSE;
-    }
+    }*/
 
 
     # This function reads your DATABASE_URL configuration automatically set by Heroku

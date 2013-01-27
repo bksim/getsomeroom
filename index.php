@@ -127,8 +127,8 @@ $app_name = idx($app_info, 'name', '');
           //e.preventDefault();
           //get clicked link location
           pageurl = $(this).attr('href');
-          alert(pageurl);
-          console.log("here");
+          //alert(pageurl);
+          //console.log("here");
           //update the div appropriately
           $.ajax({url:pageurl+'?rel=tab',success: function(data){
             $('#main').html(data);

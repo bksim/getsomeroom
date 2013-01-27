@@ -52,9 +52,12 @@
     	$nightowl,
     	$morningbird)";
 
+	 $rq = "SELECT * FROM users";
+
 	 var_dump($query_insert);
 
-    $result = pg_query($dbc, $query_insert);
+    $result = pg_query($dbc, $rq);
+    
     /*if (!$result) {
       die("Error in SQL query: " . pg_last_error());
     }*/

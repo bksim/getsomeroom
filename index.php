@@ -142,11 +142,7 @@ $app_name = idx($app_info, 'name', '');
           //alert(pageurl);
           //console.log("here");
           //update the div appropriately
-          /*$.ajax({url:pageurl+'?rel=tab',success: function(data){
-            $('#main').html(data);
-          }});*/
-
-          $.ajax({url:pageurl,success: function(data){
+          $.ajax({url:pageurl+'?rel=tab',success: function(data){
             $('#main').html(data);
           }});
 

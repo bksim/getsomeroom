@@ -281,7 +281,7 @@ $app_name = idx($app_info, 'name', '');
                 <li><a href="#faq.html">faq</a></li>
               </ul>
 
-              <p class="navbar-text pull-right">
+              <div class="nav-collapse pull-right">
                 <?php
                   $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
                 ?>
@@ -293,8 +293,7 @@ $app_name = idx($app_info, 'name', '');
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
-              </p>
-
+              </div>
             </div><!--/.nav-collapse -->
           </div>
         </div>

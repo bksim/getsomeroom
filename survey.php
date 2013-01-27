@@ -1,4 +1,5 @@
 	<form action="submit.php" method=post class="form-horizontal">
+		<input type="hidden" name="fbid" value=<?php echo $basic['id']?>>
 	  <div class="control-group">
 	    <label class="control-label" for="inputCollege">college/university attending:</label>
 	    <div class="controls">

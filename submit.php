@@ -1,4 +1,5 @@
 <?php
+    $fbid = (int)$_POST['fbid'];
 	$college = $_POST['inputCollege']; 
     $cityIntern = $_POST['inputCity'];
     $specificPartCity = $_POST['partCity']; 

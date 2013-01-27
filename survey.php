@@ -19,19 +19,19 @@
 		</div>
 
 	<div class="control-group">
-	  <label class="control-label" for="cityIntern">Select the city you'll be interning in</label>
+	  <label class="control-label">Select the city you'll be interning in</label>
 	   <div class="controls">
-		<select>
-  			<option id="NY">New York, NY</option>
-  			<option id="SF">San Francisco, CA</option>
-  			<option id="Paly">Palo Alto, CA</option>
-  			<option id="CBRIDGE">Cambridge, MA</option>
-  			<option id="BOS">Boston, MA</option>
-  			<option id="Philly">Philadelphia, PA</option>
-  			<option id="Chic">Chicago, IL</option>
-  			<option id="Shang">Shanghai, China</option>
-  			<option id="HK">Hong Kong, HK</option>
-  			<option id="other">Other</option>
+		<select name="formCity">
+  			<option value="NY">New York, NY</option>
+  			<option value="SF">San Francisco, CA</option>
+  			<option value="Paly">Palo Alto, CA</option>
+  			<option value="CBRIDGE">Cambridge, MA</option>
+  			<option value="BOS">Boston, MA</option>
+  			<option value="Philly">Philadelphia, PA</option>
+  			<option value="Chic">Chicago, IL</option>
+  			<option value="Shang">Shanghai, China</option>
+  			<option value="HK">Hong Kong, HK</option>
+  			<option value="other">Other</option>
 			</select>
 		</div>
 	</div>
@@ -50,12 +50,17 @@
 	      <input type="text" name="inputGender" placeholder="female/male/I don't care">
 	    </div>
 		</div>
-		<div class="control-group">
-	    <label class="control-label" for="inputFound">have you already found housing?</label>
-	    <div class="controls">
-	      <input type="text" name="inputFound" placeholder="yes/no">
-	    </div>
+		
+	<div class="control-group">
+	  <label class="control-label">Have you already found housing?</label>
+	   <div class="controls">
+		<select name="inputFound">
+  			<option value="t">Yes, now I just need roommates</option>
+  			<option value="f">Nope.</option>
+			</select>
 		</div>
+	</div>
+
 	    <div class="control-group">
 	    <label class="control-label" for="inputHousing">type of housing you prefer?</label>
 	    <div class="controls">
@@ -83,26 +88,38 @@
 	  </div>
 
 
-	  <br>Check the items you agree with
+	  <br>Check all items that apply:
 	  <br>
 	  <div class="control-group">
 
  
-	<label class="checkbox" style="margin-left: 170px">
-  <input type="checkbox" name="optionscheckboxs1" id="optionscheckboxs1" value="option1" checked>
-  I love people who cook
-	</label>
-	<label class="checkbox" style="margin-left: 170px">
-  <input type="checkbox" name="optionscheckboxs2" id="optionscheckboxs2" value="option2">
-  Brandon sucks
-	</label>
-	<label class="checkbox" style="margin-left: 170px">
-  <input type="checkbox" name="optionscheckboxs3" id="optionscheckboxs2" value="option2">
-  Ava is awesome
-	</label>
-	  <div class="control-group">
-	    <div class="controls">
-	      <button type="submit" class="btn">submit</button>
-	    </div>
-	  </div>
-	</form>
+		<label class="checkbox" style="margin-left: 170px">
+	  		<input type="checkbox" name="checkBox1" value="t" checked>
+	  I enjoy cooking. 
+		</label>
+		<label class="checkbox" style="margin-left: 170px">
+	  		<input type="checkbox" name="checkBox2" value="t">
+	  I like to party.
+		</label>
+		<label class="checkbox" style="margin-left: 170px">
+	  		<input type="checkbox" name="checkBox3" value="t">
+	   I like to smoke. 
+		</label>
+		<label class="checkbox" style="margin-left: 170px">
+	  		<input type="checkbox" name="checkBox4" value="t" checked>
+	  I prefer a quiet roomate. 
+		</label>
+		<label class="checkbox" style="margin-left: 170px">
+	  		<input type="checkbox" name="checkBox5" value="t" checked>
+	  I am a night owl. 
+		</label>
+		<label class="checkbox" style="margin-left: 170px">
+	  		<input type="checkbox" name="checkBox6" value="t" checked>
+	  I am a morning bird. 
+		</label>
+		  <div class="control-group">
+		    <div class="controls">
+		      <button type="submit" class="btn">submit</button>
+		    </div>
+		  </div>
+		</form>

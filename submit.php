@@ -3,25 +3,32 @@
     $firstname = $_POST['firstname'];
     $fbid = (int)$_POST['fbid'];
 	$college = $_POST['inputCollege']; 
-    $cityIntern = $_POST['inputCity'];
+    $cityIntern = $_POST['formCity'];
     $specificPartCity = $_POST['partCity']; 
     $genderPref = $_POST['inputGender']; 
-    //$foundHousing = $_POST['inputFound'];
-    $foundHousing = "f";
+    $foundHousing = $_POST['inputFound'];
+    // $foundHousing = "f";
     $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required
     $moreInfo = $_POST['moreinfo']; //required
-    /*$checkItemCook = $_POST['optionscheckboxs1']; // required
-    $checkItemParty = $_POST['optionscheckboxs2'];//required
-    $checkItemSmoke = $_POST['optionscheckboxs3'];*/
+    $checkItemCook = $_POST['checkBox1']; // required
+    if (!isset($checkItemCook)) $checkItemCook = "f";
+    
+    $checkItemParty = $_POST['checkBox2'];//required
+    if (!isset($checkItemParty)) $checkItemParty = "f";
 
-    $checkItemCook = 'f';
-    $checkItemParty = 'f';
-    $checkItemSmoke = 'f';
-    $quiet = 'f'; //change later
-    $nightowl = 'f';
-    $morningbird = 'f';
+    $checkItemSmoke = $_POST['checkBox3'];
+    if (!isset($checkItemSmoke)) $checkItemSmoke = "f";
+
+    $checkItemQuiet = $_POST['checkBox4'];
+    if (!isset($checkItemQuiet)) $checkItemQuiet = "f";
+
+    $checkItemNightOwl = $_POST['checkBox5'];
+    if (!isset($checkItemNightOwl)) $checkItemNightOwl = "f";
+
+    $checkItemMorningBird = $_POST['checkBox6'];
+    if (!isset($checkItemNightOwl)) $checkItemNightOwl = "f";
 
     # This function reads your DATABASE_URL configuration automatically set by Heroku
     # the return value is a string that will work with pg_connect
@@ -50,9 +57,9 @@
         '$checkItemCook',
     	'$checkItemParty', 
     	'$checkItemSmoke',
-    	'$quiet',
-    	'$nightowl',
-    	'$morningbird')" . 
+    	'$checkItemQuiet',
+    	'$checkItemNightOwl',
+    	'$checkItemMorningBird')" . 
 
         "ON DUPLICATE KEY UPDATE
             college='$college',

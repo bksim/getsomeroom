@@ -334,7 +334,7 @@ $app_name = idx($app_info, 'name', '');
           <a class="brand" href="/">get a room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="matches.php" rel="tab">matches</a></li>
+              <li><a href="/" rel="tab">matches</a></li>
               <li><a href="survey.php" rel="tab">view/edit profile</a></li>
               <li><a href="about.php" rel="tab">about</a></li>
               <li><a href="faq.php" rel="tab">faq</a></li>
@@ -518,4 +518,6 @@ $app_name = idx($app_info, 'name', '');
       </ul>
     </section>-->
   </body>
+
+  <?php include 'footer.php'?>
 </html>

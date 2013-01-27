@@ -52,8 +52,9 @@
     	'$checkItemSmoke',
     	'$quiet',
     	'$nightowl',
-    	'$morningbird')
-        ON DUPLICATE UPDATE
+    	'$morningbird')" . 
+
+        "ON DUPLICATE KEY UPDATE
             college='$college',
             cityIntern='$cityIntern',
             specificPartCity='$specificPartCity',

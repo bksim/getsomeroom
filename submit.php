@@ -44,17 +44,17 @@
     	'$college',
     	'$cityIntern',
     	'$specificPartCity',
-    	'$genderPref',
-    	'$foundHousing',
+    	'$genderPref', " . 
+    	$foundHousing . ",
     	'$housingPref',
     	'$company',
     	'$internJob',
-    	'$moreInfo',
-    	'$checkItemParty',
-    	'$checkItemSmoke',
-    	'$quiet',
-    	'$nightowl',
-    	'$morningbird')";
+    	'$moreInfo', " . 
+    	$checkItemParty . ", " . 
+    	$checkItemSmoke . ", " . 
+    	$quiet . ", " . 
+    	$nightowl ", " . 
+    	$morningbird . ")";
 
 
     $result = pg_query($db, $query_insert);

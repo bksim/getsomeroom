@@ -163,7 +163,6 @@ $app_name = idx($app_info, 'name', '');
         var imgArr = new Array( // relative paths of images
           'images/sanfrancisco.jpg', 
           'images/newyork.jpg', 
-          'images/hongkong.jpg'
           );
           
         var preloadArr = new Array();
@@ -176,7 +175,7 @@ $app_name = idx($app_info, 'name', '');
         }
         
         var currImg = 1;
-        var intID = setInterval(changeImg, 2000);
+        var intID = setInterval(changeImg, 5000); /*number of milliseconds*/
         
         function changeImg(){
           $('#masthead').animate({opacity: 0}, 1000, function(){

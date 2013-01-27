@@ -53,6 +53,7 @@
     	'$company',
     	'$internJob',
     	'$moreInfo', 
+        '$checkItemCook',
     	'$checkItemParty', 
     	'$checkItemSmoke',
     	'$quiet',

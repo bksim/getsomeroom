@@ -120,6 +120,39 @@ $app_name = idx($app_info, 'name', '');
     <script type="text/javascript" src="/javascript/jquery-1.7.1.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
 
+    <!-- HANDLE NAV BAR NAVIGATION USING AJAX CALLS, HTML5-COMPLIANT-->
+    <script type="text/javascript">                                         
+      $(function(){
+        $("a[rel='tab']").click(function(e){
+        //e.preventDefault();
+          //get clicked link location
+          pageurl = $(this).attr('href');
+          //alert(pageurl);
+          //console.log("here");
+          //update the div appropriately
+          $.ajax({url:pageurl+'?rel=tab',success: function(data){
+            $('#main').html(data);
+          }});
+
+          //change browser URL to given link location
+          if(pageurl!=window.location){
+            window.history.pushState({path:pageurl},'',pageurl);
+          }
+
+          //stop refreshing to page   
+          return false;
+        });
+      });
+
+      //override back button to get ajax content
+      $(window).bind('popstate', function(){
+        $.ajax({url:location.pathname+'?rel=tab',success: function(data){
+          $('#main').html(data);
+        }});
+      });                          
+    </script>
+    <!--END NAV BAR HANDLING-->
+
     <script type="text/javascript">
       function logResponse(response) {
         if (console && console.log) {
@@ -184,7 +217,7 @@ $app_name = idx($app_info, 'name', '');
       </script>
     <![endif]-->
   </head>
-  
+
   <body>
     <div id="fb-root"></div>
     <script type="text/javascript">
@@ -263,7 +296,7 @@ $app_name = idx($app_info, 'name', '');
 
     ?>
 
-
+    <!-- NAV BAR ONLY IF LOGGED IN -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container" style="padding-left:5%;padding-right:5%;width:auto;">
@@ -275,10 +308,10 @@ $app_name = idx($app_info, 'name', '');
           <a class="brand" href="/">get a room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#matches">matches</a></li>
-              <li><a href="#survey.html">view/edit profile</a></li>
-              <li><a href="#about.html">about</a></li>
-              <li><a href="#faq.html">faq</a></li>
+              <li><a href="matches.php" rel="tab">matches</a></li>
+              <li><a href="survey.php" rel="tab">view/edit profile</a></li>
+              <li><a href="about.html" rel="tab">about</a></li>
+              <li><a href="faq.html" rel="tab">faq</a></li>
             </ul>
 
 
@@ -333,97 +366,100 @@ $app_name = idx($app_info, 'name', '');
       if ($user_id) {
     ?>
 
-    <section id="samples" class="clearfix">
-      <h1>Examples of the Facebook Graph API</h1>
 
-      <div class="list">
-        <h3>A few of your friends</h3>
-        <ul class="friends">
-          <?php
-            foreach ($friends as $friend) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($friend, 'id');
-              $name = idx($friend, 'name');
-          ?>
-          <li>
-            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
-              <?php echo he($name); ?>
-            </a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
+    <div id="main">
+      <section id="samples" class="clearfix">
+        <h1>Time for you to getsomeroom, <?php echo $basic['name'];?></h1>
 
-      <div class="list inline">
-        <h3>Recent photos</h3>
-        <ul class="photos">
-          <?php
-            $i = 0;
-            foreach ($photos as $photo) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($photo, 'id');
-              $picture = idx($photo, 'picture');
-              $link = idx($photo, 'link');
+        <div class="list">
+          <h3>A few of your friends</h3>
+          <ul class="friends">
+            <?php
+              foreach ($friends as $friend) {
+                // Extract the pieces of info we need from the requests above
+                $id = idx($friend, 'id');
+                $name = idx($friend, 'name');
+            ?>
+            <li>
+              <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
+                <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
+                <?php echo he($name); ?>
+              </a>
+            </li>
+            <?php
+              }
+            ?>
+          </ul>
+        </div>
 
-              $class = ($i++ % 4 === 0) ? 'first-column' : '';
-          ?>
-          <li style="background-image: url(<?php echo he($picture); ?>);" class="<?php echo $class; ?>">
-            <a href="<?php echo he($link); ?>" target="_top"></a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
+        <div class="list inline">
+          <h3>Recent photos</h3>
+          <ul class="photos">
+            <?php
+              $i = 0;
+              foreach ($photos as $photo) {
+                // Extract the pieces of info we need from the requests above
+                $id = idx($photo, 'id');
+                $picture = idx($photo, 'picture');
+                $link = idx($photo, 'link');
 
-      <div class="list">
-        <h3>Things you like</h3>
-        <ul class="things">
-          <?php
-            foreach ($likes as $like) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($like, 'id');
-              $item = idx($like, 'name');
+                $class = ($i++ % 4 === 0) ? 'first-column' : '';
+            ?>
+            <li style="background-image: url(<?php echo he($picture); ?>);" class="<?php echo $class; ?>">
+              <a href="<?php echo he($link); ?>" target="_top"></a>
+            </li>
+            <?php
+              }
+            ?>
+          </ul>
+        </div>
 
-              // This display's the object that the user liked as a link to
-              // that object's page.
-          ?>
-          <li>
-            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($item); ?>">
-              <?php echo he($item); ?>
-            </a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
+        <div class="list">
+          <h3>Things you like</h3>
+          <ul class="things">
+            <?php
+              foreach ($likes as $like) {
+                // Extract the pieces of info we need from the requests above
+                $id = idx($like, 'id');
+                $item = idx($like, 'name');
 
-      <div class="list">
-        <h3>Friends using this app</h3>
-        <ul class="friends">
-          <?php
-            foreach ($app_using_friends as $auf) {
-              // Extract the pieces of info we need from the requests above
-              $id = idx($auf, 'uid');
-              $name = idx($auf, 'name');
-          ?>
-          <li>
-            <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-              <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
-              <?php echo he($name); ?>
-            </a>
-          </li>
-          <?php
-            }
-          ?>
-        </ul>
-      </div>
-    </section>
+                // This display's the object that the user liked as a link to
+                // that object's page.
+            ?>
+            <li>
+              <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
+                <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($item); ?>">
+                <?php echo he($item); ?>
+              </a>
+            </li>
+            <?php
+              }
+            ?>
+          </ul>
+        </div>
+
+        <div class="list">
+          <h3>Friends using this app</h3>
+          <ul class="friends">
+            <?php
+              foreach ($app_using_friends as $auf) {
+                // Extract the pieces of info we need from the requests above
+                $id = idx($auf, 'uid');
+                $name = idx($auf, 'name');
+            ?>
+            <li>
+              <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
+                <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
+                <?php echo he($name); ?>
+              </a>
+            </li>
+            <?php
+              }
+            ?>
+          </ul>
+        </div>
+      </section>
+    </div>
 
     <?php
       }

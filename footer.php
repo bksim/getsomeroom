@@ -1,3 +1,1 @@
-      <div class="footer">
-        <p>&copy; ava & brandon</p>
-      </div>
+<div class="navbar navbar-fixed-bottom">&copy; ava & brandon</div>

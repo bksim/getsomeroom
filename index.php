@@ -281,7 +281,7 @@ $app_name = idx($app_info, 'name', '');
                 <li><a href="#faq.html">faq</a></li>
               </ul>
 
-              <div class="nav-collapse pull-right">
+              <div class="nav-collapse pull-right" style="width:150px;">
                 <?php
                   $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
                 ?>

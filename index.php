@@ -183,9 +183,8 @@ $app_name = idx($app_info, 'name', '');
           document.createElement(tags.pop());
       </script>
     <![endif]-->
-
-
   </head>
+  
   <body>
     <div id="fb-root"></div>
     <script type="text/javascript">
@@ -223,124 +222,112 @@ $app_name = idx($app_info, 'name', '');
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
-    <div>
     <header class="clearfix">
     </header>
-      <?php if (isset($basic)) { ?>
 
-      <?php
+    <!-- IF USER IS LOGGED IN AND BASIC IS SET -->
+    <?php if (isset($basic)) { ?>
 
-      foreach ($basic as $value){
-        echo $value;
-        echo "<br/>";
-      }
-      # This function reads your DATABASE_URL configuration automatically set by Heroku
-      # the return value is a string that will work with pg_connect
-      function pg_connection_string() {
-        return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
-      }
-      # Establish db connection
-      $db = pg_connect(pg_connection_string());
+    <?php
+    #foreach ($basic as $value){
+    #  echo $value;
+    #  echo "<br/>";
+    #}
 
-      $sqlcommand = "SELECT * FROM users";
-      $result = pg_query($db, $sqlcommand);
-      if (!$result) {
-        die("Error in SQL query: " . pg_last_error());
-      }
+    # This function reads your DATABASE_URL configuration automatically set by Heroku
+    # the return value is a string that will work with pg_connect
+    function pg_connection_string() {
+      return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
+    }
+    # Establish db connection
+    $db = pg_connect(pg_connection_string());
 
-      // iterate over result set
-      // print each row
-      /*while ($row = pg_fetch_array($result)) {
-         echo "FBID: " . $row[0] . "<br />";
-         echo "email: " . $row[1] . "<p />";
-      }
+    $sqlcommand = "SELECT * FROM users";
+    $result = pg_query($db, $sqlcommand);
+    if (!$result) {
+      die("Error in SQL query: " . pg_last_error());
+    }
 
-      // free memory
-      pg_free_result($result);*/      
+    // iterate over result set
+    // print each row
+    /*while ($row = pg_fetch_array($result)) {
+       echo "FBID: " . $row[0] . "<br />";
+       echo "email: " . $row[1] . "<p />";
+    }
 
-      // close connection
-      pg_close($db);
+    // free memory
+    pg_free_result($result);*/      
 
-      ?>
+    // close connection
+    pg_close($db);
 
-
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container" style="padding-left:5%;padding-right:5%;width:auto;">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="/">get a room</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li><a href="#matches">matches</a></li>
-                <li><a href="#survey.html">view/edit profile</a></li>
-                <li><a href="#about.html">about</a></li>
-                <li><a href="#faq.html">faq</a></li>
-              </ul>
+    ?>
 
 
-              <ul class="nav pull-right" style="width:15%;">
-                <?php $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';?>
-                <img src="<? echo $pictureurl; ?>" width="35" height="35">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Logout</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </div>
-      </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container" style="padding-left:5%;padding-right:5%;width:auto;">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">get a room</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="#matches">matches</a></li>
+              <li><a href="#survey.html">view/edit profile</a></li>
+              <li><a href="#about.html">about</a></li>
+              <li><a href="#faq.html">faq</a></li>
+            </ul>
 
 
-      </div>
-      <?php } else { ?>
-      <div>
-        <!-- added -->
-        <div id="logincontainer">
-              <div id="loginbox">
-                <h1 id="aTitle">get some room.</h1>
-                <br>
-                <h2 id="caption">find an awesome internship but need roommates?</h2>
-                <p id="tagline">Enter to find your best roommate matches.</p>
-                <!-- AddThis Button BEGIN -->
-                <div id="login-flow" style="padding-left:30px;">
-                  <!-- <fb:login-button size="xlarge" perms="email,offline_access" show-faces="false" onlogin="Log.info('onlogin callback')" style="font-family:'Franklin Gothic Medium' background-color:#00009C;">
-                    Sign Up With Facebook</fb:login-button> -->
-                    <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
-                    <!--<a href="#" onclick="oauth_login_url;"><img src="images/facebooklogin.jpg" border="0" alt=""></a> -->
-                </div>
-                <div class="addthis_toolbox addthis_default_style " style="margin:0 auto;margin-top:20px;width:155px;">
-                  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                  <a class="addthis_button_tweet" style="width:69px;"></a>
-                </div>
-                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50552bd1589c29ce"></script>
-                <!-- AddThis Button END -->
-          </div>
+            <ul class="nav pull-right" style="width:15%;">
+              <?php $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';?>
+              <img src="<? echo $pictureurl; ?>" width="35" height="35">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-
-
-
-
-        
+    <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
+    <?php } else { ?>
+    <div>
+      <!-- added -->
+      <div id="logincontainer">
+        <div id="loginbox">
+          <h1 id="aTitle">get some room.</h1>
+          <br>
+          <h2 id="caption">find an awesome internship but need roommates?</h2>
+          <p id="tagline">Enter to find your best roommate matches.</p>
+          <!-- AddThis Button BEGIN -->
+          <div id="login-flow" style="padding-left:30px;">
+            <!-- <fb:login-button size="xlarge" perms="email,offline_access" show-faces="false" onlogin="Log.info('onlogin callback')" style="font-family:'Franklin Gothic Medium' background-color:#00009C;">
+              Sign Up With Facebook</fb:login-button> -->
+              <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+              <!--<a href="#" onclick="oauth_login_url;"><img src="images/facebooklogin.jpg" border="0" alt=""></a> -->
+          </div>
+          <div class="addthis_toolbox addthis_default_style " style="margin:0 auto;margin-top:20px;width:155px;">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet" style="width:69px;"></a>
+          </div>
+          <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+          <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50552bd1589c29ce"></script>
+          <!-- AddThis Button END -->
+        </div>
       </div>
-      <?php } ?>
-  </div>
+    </div>
+    <?php } ?>
 
-    <!--<section id="get-started">
-      <p>Welcome to your Facebook app, running on <span>heroku</span>!</p>
-      <a href="https://devcenter.heroku.com/articles/facebook" target="_top" class="button">Learn How to Edit This App</a>
-    </section>-->
+    <!--USER ID EXISTS -->
 
     <?php
       if ($user_id) {

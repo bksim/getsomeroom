@@ -2,7 +2,9 @@
 	#header {padding: 30px 0 0 0;}
 	#content {clear: both; background: url(content-bg.png) top center repeat-y;}
 		#mast-head-main {width: 950px; height: 350px; margin: 0 auto 45px auto; position: relative;}*/
-			#masthead {/*width: 950px; height: 350px; */width:100%;height:100%;background: url(../images/newyork.jpg) top center no-repeat;}
+			#masthead {/*width: 950px; height: 350px; */background: url(../images/newyork.jpg) top center no-repeat;
+				background-size:cover;
+				background-attachment:fixed;}
 			/*#masthead-inner-wrapper {position: absolute; left: 30px; top: 60px;}/*
 		#left-column {float: left; width: 318px;}
 		#right-column {float: right; width: 318px;}

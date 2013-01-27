@@ -55,9 +55,9 @@
 	 var_dump($query_insert);
 
     $result = pg_query($dbc, $query_insert);
-    if (!$result) {
+    /*if (!$result) {
       die("Error in SQL query: " . pg_last_error());
-    }
+    }*/
     // free memory
     pg_free_result($result);
 

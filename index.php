@@ -120,8 +120,19 @@ $app_name = idx($app_info, 'name', '');
     <meta property="og:description" content="My first app" />
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
-    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script> 
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.cycle.all.js"></script> 
     <script src="javascript/bootstrap.min.js"></script>
+
+    <!-- testing cycle.js -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.slideshow').cycle({
+            fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+        });
+    });
+    </script>
+<!--background slide change-->
 
     <!-- HANDLE NAV BAR NAVIGATION USING AJAX CALLS, HTML5-COMPLIANT-->
     <script type="text/javascript">                                         
@@ -255,8 +266,16 @@ $app_name = idx($app_info, 'name', '');
     <![endif]-->
   </head>
 
-  <div id="masthead"></div>
+  <div></div>
   <body>
+
+        <!--background slide change-->
+    <div id="mt-bg" class="slideshow">
+            <img src="images/sanfrancisco.jpg">
+            <img src="images/newyork.jpg">
+    </div>
+    <!--background slide change--> 
+
     <div id="fb-root"></div>
     <script type="text/javascript">
       window.fbAsyncInit = function() {
@@ -390,6 +409,7 @@ $app_name = idx($app_info, 'name', '');
           </div>
           <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
           <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50552bd1589c29ce"></script>
+
           <!-- AddThis Button END -->
         </div>
       </div>

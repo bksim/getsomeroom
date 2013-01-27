@@ -163,7 +163,6 @@ $app_name = idx($app_info, 'name', '');
         var imgArr = new Array( // relative paths of images
           'images/sanfrancisco.jpg', 
           'images/newyork.jpg', 
-          'images/shanghai.jpg', 
           'images/hongkong.jpg'
           );
           

@@ -6,12 +6,12 @@
 }
 
 html, body {
-  background: url(../images/newyork.jpg) no-repeat center center fixed; 
+  /*background: url(../images/newyork.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-attachment:fixed;
+  background-attachment:fixed;*/
 }
 
 body{

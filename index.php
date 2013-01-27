@@ -132,7 +132,7 @@ $app_name = idx($app_info, 'name', '');
         });
     });
     </script>
-<!--background slide change-->
+    <!--background slide change-->
 
     <!-- HANDLE NAV BAR NAVIGATION USING AJAX CALLS, HTML5-COMPLIANT-->
     <script type="text/javascript">                                         
@@ -168,38 +168,6 @@ $app_name = idx($app_info, 'name', '');
       });*/                          
     </script>
     <!--END NAV BAR HANDLING-->
-
-
-    <!--MASTHEAD JAVASCRIPT -->
-    <script type="text/javascript">
-      $(document).ready(function(){
-        var imgArr = new Array( // relative paths of images
-          'images/sanfrancisco.jpg', 
-          'images/newyork.jpg',
-          'images/hongkong.jpg'
-          );
-          
-        var preloadArr = new Array();
-        var i;
-        
-        /* preload images */
-        for(i=0; i < imgArr.length; i++){
-          preloadArr[i] = new Image();
-          preloadArr[i].src = imgArr[i];
-        }
-        
-        var currImg = 1;
-        var intID = setInterval(changeImg, 5000); /*number of milliseconds*/
-        
-        function changeImg(){
-          $('#masthead').animate({opacity: 0}, 1000, function(){
-            $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
-          }).animate({opacity: 1}, 1000);
-        }
-      });
-    </script>
-    <!--END MASTHEAD-->
-
 
     <script type="text/javascript">
       function logResponse(response) {
@@ -269,10 +237,11 @@ $app_name = idx($app_info, 'name', '');
   <div></div>
   <body>
 
-        <!--background slide change-->
+    <!--background slide change-->
     <div id="mt-bg" class="slideshow">
-            <img src="images/sanfrancisco.jpg">
-            <img src="images/newyork.jpg">
+      <img src="images/sanfrancisco.jpg">
+      <img src="images/newyork.jpg">
+      <img src="images/hongkong.jpg">
     </div>
     <!--background slide change--> 
 

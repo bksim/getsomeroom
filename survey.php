@@ -4,7 +4,7 @@
     $specificPartCity = $_POST['partCity'] 
     $genderPref = $_POST['inputGender']; 
     /*$foundHousing = $_POST['inputFound'];*/
-    //$foundHousing = 0;
+    /*$foundHousing = 0;*/
     /*
     $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required

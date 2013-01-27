@@ -37,9 +37,11 @@
     # Establish db connection
     $db = pg_connect(pg_connection_string());
     
-    
+    // NEED TO CHECK IF FBID ALREADY EXISTS IN DATABASE
+    //IF SO USE UPDATE INSTEAD OF INSERT
+
         #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
-    $query_insert = "INSERT INTO users VALUES (5,
+    $query_insert = "INSERT INTO users VALUES (" . $fbid . ",
     	'Chang',
     	'Ava',
     	'$college',

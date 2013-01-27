@@ -162,7 +162,8 @@ $app_name = idx($app_info, 'name', '');
       $(document).ready(function(){
         var imgArr = new Array( // relative paths of images
           'images/sanfrancisco.jpg', 
-          'images/newyork.jpg', 
+          'images/newyork.jpg',
+          'images/hongkong.jpg'
           );
           
         var preloadArr = new Array();

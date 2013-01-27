@@ -67,4 +67,5 @@
 
     // close connection
     pg_close($db);
-    ?>
+    header('Location: index.php'); 
+?>

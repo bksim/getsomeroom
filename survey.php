@@ -1,10 +1,10 @@
 	 <?php
 	$college = $_POST['inputCollege']; // required
-    /*$cityIntern = $_POST['inputCity']; // required
+    $cityIntern = $_POST['inputCity']; // required
     $specificPartCity = $_POST['partCity'] //required
     $genderPref = $_POST['inputGender']; // required
     //$foundHousing = $_POST['inputFound']; // required
-    $foundHousing = FALSE;
+    $foundHousing = FALSE;/*
     $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required

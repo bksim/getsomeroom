@@ -15,14 +15,6 @@ html, body {
 	padding-top:75px;
 }
 
-#loginbox{
-  position:absolute;
-  width:34%;
-  height:34%;
-  top:33%;
-  left:33%;
-}
-
 .form {
 	border-radius:4px;
 	font-size:14px;
@@ -56,8 +48,15 @@ html, body {
 	margin-bottom:22px;
 }
 
+
 #loginbox {
-	width:800px;
+  position:absolute;
+  width:34%;
+  height:34%;
+  top:33%;
+  left:33%;
+
+	/*width:800px;*/
 	text-align:center;
 	margin:0 auto;
 	padding:20px;
@@ -67,10 +66,10 @@ html, body {
 	color:#eee;
 	background: url(../images/boxtile.png) repeat;
 	border: 1px solid rgba(90, 90, 90, 0.7);
-	position: relative;
+	/*position: relative;*/
 	margin: 0 auto 40px auto;
-	width: 500px;
-	height: auto;
+	/*width: 500px;*/
+	/*height: auto;*/
 	min-height: 330px;
 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 	border-radius: 4px;

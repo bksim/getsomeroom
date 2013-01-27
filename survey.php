@@ -62,7 +62,7 @@
     pg_free_result($result);
 
     // close connection
-    pg_close($db);*/
+    pg_close($db);
 
     ?>
 

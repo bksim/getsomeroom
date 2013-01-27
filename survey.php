@@ -1,9 +1,10 @@
 <script>FB.api('/me', function(response) {
-  alert('Your name is ' + response.name);
+  document.getElementById("fbid").value=response.id;
+  alert(response.id);
 });</script>
 
 	<form action="submit.php" method=post class="form-horizontal">
-		<input type="hidden" name="fbid" value="<?php echo $basic['id'];?>">
+		<input type="hidden" id="fbid" name="fbid" value="">
 	  <div class="control-group">
 	    <label class="control-label" for="inputCollege">college/university attending:</label>
 	    <div class="controls">

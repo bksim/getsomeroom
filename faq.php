@@ -62,9 +62,6 @@
   <body>
 
     <div class="container-narrow">
-
-      <hr>
-
       <div class="jumbotron">
         <h2>FAQ</h2>
         <p class="lead">What is the purpose of Get A Room?</p>

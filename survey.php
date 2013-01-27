@@ -1,5 +1,5 @@
 	 <?php
-	$College = $_POST['inputCollege']; // required
+	$college = $_POST['inputCollege']; // required
     $cityIntern = $_POST['inputCity']; // required
     $genderPref = $_POST['inputGender']; // required
     $foundHousing = $_POST['inputFound']; // required
@@ -25,7 +25,7 @@
     $db = pg_connect(pg_connection_string());
 
     #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES 
-    INSERT INTO users VALUES ($College, $cityIntern, $specificPartCity, 
+    $sqlcommand = "INSERT INTO users VALUES (1, "Chang", "Ava", $college, $cityIntern, $specificPartCity, 
 	$genderPref,
 	$foundHousing, 
 	$housingPref, 
@@ -34,21 +34,21 @@
 	$moreInfo, 
 	$checkItemCook, 
 	$checkItemParty, 
-	$checkItemSmoke)
+	$checkItemSmoke)";
 
     $result = pg_query($db, $sqlcommand);
     if (!$result) {
       die("Error in SQL query: " . pg_last_error());
     }
     // free memory
-    pg_free_result($result);    
+    pg_free_result($result);
 
     // close connection
     pg_close($db);
 
     ?>
 
-	<form action="{{ url_for('add_information') }}" method=post class="form-horizontal">
+	<form action="<?php $_SERVER["PHP_SELF"]?>" method=post class="form-horizontal">
 	  <div class="control-group">
 	    <label class="control-label" for="inputCollege">college/university attending:</label>
 	    <div class="controls">

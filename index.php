@@ -329,7 +329,7 @@ $app_name = idx($app_info, 'name', '');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">get a room</a>
+          <a class="brand" href="/">get some room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="/" rel="tab">matches</a></li>

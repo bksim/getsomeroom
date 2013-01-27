@@ -1,5 +1,5 @@
 	 <?php
-	/*$college = $_POST['inputCollege']; // required
+	$college = $_POST['inputCollege']; // required
     $cityIntern = $_POST['inputCity']; // required
     $genderPref = $_POST['inputGender']; // required
     $foundHousing = $_POST['inputFound']; // required
@@ -16,6 +16,7 @@
     	$cityIntern = 1;
     }
 
+    /*
     # This function reads your DATABASE_URL configuration automatically set by Heroku
     # the return value is a string that will work with pg_connect
     function pg_connection_string() {

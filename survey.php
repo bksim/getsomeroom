@@ -1,6 +1,6 @@
-	 <?php/*
+	 <?php
 	$college = $_POST['inputCollege']; // required
-    $cityIntern = $_POST['inputCity']; // required
+    /*$cityIntern = $_POST['inputCity']; // required
     $specificPartCity = $_POST['partCity'] //required
     $genderPref = $_POST['inputGender']; // required
     //$foundHousing = $_POST['inputFound']; // required

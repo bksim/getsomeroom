@@ -1,4 +1,6 @@
 <?php
+    $lastname = $_POST['lastname'];
+    $firstname = $_POST['firstname'];
     $fbid = (int)$_POST['fbid'];
 	$college = $_POST['inputCollege']; 
     $cityIntern = $_POST['inputCity'];
@@ -42,8 +44,8 @@
 
         #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
     $query_insert = "INSERT INTO users VALUES (" . $fbid . ",
-    	'Chang',
-    	'Ava',
+    	'$lastname',
+    	'$firstname',
     	'$college',
     	'$cityIntern',
     	'$specificPartCity',

@@ -1,10 +1,14 @@
 <script>FB.api('/me', function(response) {
   document.getElementById("fbid").value=response.id;
-  alert(response.name.split(" "));
+  var temp = response.name.split(" ");
+  document.getElementById("lastname").value=temp[1];
+  document.getElementById("firstname").value=temp[0];
 });</script>
 
 	<form action="submit.php" method=post class="form-horizontal">
 		<input type="hidden" id="fbid" name="fbid" value="">
+		<input type="hidden" id="lastname" name="lastname" value="">
+		<input type="hidden" id="firstname" name="firstname" value="">
 	  <div class="control-group">
 	    <label class="control-label" for="inputCollege">college/university attending:</label>
 	    <div class="controls">

@@ -1,6 +1,6 @@
 <script>FB.api('/me', function(response) {
   document.getElementById("fbid").value=response.id;
-  alert(response.id);
+  alert(response.name.split(" "));
 });</script>
 
 	<form action="submit.php" method=post class="form-horizontal">

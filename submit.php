@@ -1,7 +1,7 @@
 <?php
 	$college = $_POST['inputCollege']; 
     $cityIntern = $_POST['inputCity'];
-    $specificPartCity = $_POST['partCity'] 
+    $specificPartCity = $_POST['partCity']; 
     $genderPref = $_POST['inputGender']; 
     //$foundHousing = $_POST['inputFound'];
     $foundHousing = FALSE;

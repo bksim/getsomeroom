@@ -282,7 +282,7 @@ $app_name = idx($app_info, 'name', '');
               </ul>
 
 
-              <ul class="nav pull-right">
+              <ul class="nav pull-right" style="width:15%;">
                 <?php $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';?>
                 <img src="<? echo $pictureurl; ?>" width="35" height="35">
                 <li class="dropdown">

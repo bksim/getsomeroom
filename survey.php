@@ -94,7 +94,7 @@
 	  <div class="control-group">
 	    <label class="control-label" for="inputCompany">what company are you working for?</label>
 	    <div class="controls">
-	      <input type="text" name="inputComapny" placeholder="">
+	      <input type="text" name="inputCompany" placeholder="">
 	    </div>
 	  </div>
 	  <div class="control-group">

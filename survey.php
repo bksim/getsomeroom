@@ -9,27 +9,29 @@
 		<input type="hidden" id="fbid" name="fbid" value="">
 		<input type="hidden" id="lastname" name="lastname" value="">
 		<input type="hidden" id="firstname" name="firstname" value="">
-	  <div class="control-group">
-	    <label class="control-label" for="inputCollege">college/university attending:</label>
-	    <div class="controls">
-	      <input type="text" name="inputCollege" placeholder="">
-	    </div>
-	  </div
- 
-	  <div class="control-group">
- 		<label class="control-label" for="inputCity">Select the city you will be interning in. If the city isn't there, please select "other":</label>
- 	<div class="controls">
-	  <select>
-  		<option id="NY">New York, NY</option>
-  		<option id="SF">San Francisco, CA</option>
-  		<option id="Paly">Palo Alto, CA</option>
-  		<option id="CBRIDGE">Cambridge, MA</option>
-  		<option id="BOS">Boston, MA</option>
-  		<option id="Philly">Philadelphia, PA</option>
-  		<option id="Chic">Chicago, IL</option>
-  		<option id="Shang">Shanghai, China</option>
-  		<option id="HK">Hong Kong, HK</option>
-  		<option id="other">Other</option>
+
+		<div class="control-group">
+			<label class = "control-label" for="inputCollege"> What college do you attend?</label>
+
+			<div class="controls">
+				<input type="text" name="inputCollege" placeholder="">
+			</div>
+		</div>
+
+	<div class="control-group">
+	  <label class="control-label" for="cityIntern">Select the city you'll be interning in</label>
+	   <div class="controls">
+		<select>
+  			<option id="NY">New York, NY</option>
+  			<option id="SF">San Francisco, CA</option>
+  			<option id="Paly">Palo Alto, CA</option>
+  			<option id="CBRIDGE">Cambridge, MA</option>
+  			<option id="BOS">Boston, MA</option>
+  			<option id="Philly">Philadelphia, PA</option>
+  			<option id="Chic">Chicago, IL</option>
+  			<option id="Shang">Shanghai, China</option>
+  			<option id="HK">Hong Kong, HK</option>
+  			<option id="other">Other</option>
 			</select>
 		</div>
 	</div>
@@ -40,6 +42,7 @@
 	      <input type="text" name="partCity" placeholder="">
 	    </div>
 	  </div>
+
 
 	  <div class="control-group">
 	    <label class="control-label" for="inputGender">gender roomate preference?</label>

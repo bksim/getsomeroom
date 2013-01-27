@@ -254,7 +254,8 @@ $app_name = idx($app_info, 'name', '');
     <![endif]-->
   </head>
 
-  <body id="masthead">
+  <div id="masthead"></div>
+  <body>
     <div id="fb-root"></div>
     <script type="text/javascript">
       window.fbAsyncInit = function() {

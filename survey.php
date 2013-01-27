@@ -34,12 +34,12 @@
     #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
     $sqlcommand = "INSERT INTO users VALUES (1, 
     	'Chang', 
-    	'Ava', " . $college . ", " . $cityIntern . ", " .  $specificPartCity . ", " .  $genderPref . ", " . 
-	$foundHousing . ", " .  
-	$housingPref . ", " .  
-	$company . ", " .  
-	$internJob . ", " .  
-	$moreInfo . ", " .  
+    	'Ava', '" . $college . "', '" . $cityIntern . "', '" .  $specificPartCity . "', '" .  $genderPref . "', " . 
+	$foundHousing . ", '" .  
+	$housingPref . "', '" .  
+	$company . "', '" .  
+	$internJob . "', '" .  
+	$moreInfo . "', " .  
 	$checkItemCook . ", " .  
 	$checkItemParty . ", " .  
 	$checkItemSmoke . ", " . $quiet . ", " . $nightowl . ", " . $morningbird . ")";

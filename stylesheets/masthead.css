@@ -10,7 +10,7 @@
 				right:0;
 				width:100%;
 				background: url(../images/newyork.jpg) top center no-repeat;
-				background-size:cover;
+				background-size:100%;
 				background-attachment:fixed;
 				margin-top:-60px; /*to make it go up over the navbar*/
 			}

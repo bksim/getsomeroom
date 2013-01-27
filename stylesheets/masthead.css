@@ -1,0 +1,17 @@
+/*#wrapper {width: 964px; margin: 0 auto; position: relative;}
+	#header {padding: 30px 0 0 0;}
+	#content {clear: both; background: url(content-bg.png) top center repeat-y;}
+		#mast-head-main {width: 950px; height: 350px; margin: 0 auto 45px auto; position: relative;}*/
+			#masthead {/*width: 950px; height: 350px; */background: url(images/newyork.jpg) top center no-repeat;}
+			/*#masthead-inner-wrapper {position: absolute; left: 30px; top: 60px;}
+		#left-column {float: left; width: 318px;}
+		#right-column {float: right; width: 318px;}
+		#middle-column {margin: 0 auto; width: 318px; border-right: 1px solid #ccc; border-left: 1px solid #ccc;}*/
+		/*#left-column, #right-column, #middle-column {margin-bottom: 30px;} */
+		/*.column-inside-wrapper {padding: 0 30px;}
+		
+	#footer {background: url(sub-nav-bg.png) top center no-repeat;}
+		#sub-nav {}
+		#copyright, #contact-info {font-weight: bold; font-size: 11px; color: #f1e38c; margin: 30px; line-height: 18px;}
+			#copyright {float: left;}
+			#contact-info {right: right; text-align: right;}*/

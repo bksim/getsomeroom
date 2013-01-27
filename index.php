@@ -92,6 +92,7 @@ $app_name = idx($app_info, 'name', '');
     <link rel="stylesheet" href="stylesheets/login.css" />
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="stylesheets/bootstrap-responsive.min.css" />
+    <link href="stylesheets/masthead.css" rel="stylesheet" type="text/css" media="screen" />
 
 
     <style>
@@ -117,7 +118,7 @@ $app_name = idx($app_info, 'name', '');
     <meta property="og:description" content="My first app" />
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
-    <script type="text/javascript" src="/javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> 
     <script src="javascript/bootstrap.min.js"></script>
 
     <!-- HANDLE NAV BAR NAVIGATION USING AJAX CALLS, HTML5-COMPLIANT-->
@@ -154,6 +155,39 @@ $app_name = idx($app_info, 'name', '');
       });*/                          
     </script>
     <!--END NAV BAR HANDLING-->
+
+
+    <!--MASTHEAD JAVASCRIPT -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var imgArr = new Array( // relative paths of images
+          'images/sanfrancisco.jpg', 
+          'images/newyork.jpg', 
+          'images/shanghai.jpg', 
+          'images/hongkong.jpg'
+          );
+          
+        var preloadArr = new Array();
+        var i;
+        
+        /* preload images */
+        for(i=0; i < imgArr.length; i++){
+          preloadArr[i] = new Image();
+          preloadArr[i].src = imgArr[i];
+        }
+        
+        var currImg = 1;
+        var intID = setInterval(changeImg, 2000);
+        
+        function changeImg(){
+          $('#masthead').animate({opacity: 0}, 1000, function(){
+            $(this).css('background','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
+          }).animate({opacity: 1}, 1000);
+        }
+      });
+    </script>
+    <!--END MASTHEAD-->
+
 
     <script type="text/javascript">
       function logResponse(response) {
@@ -335,9 +369,8 @@ $app_name = idx($app_info, 'name', '');
 
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
-    <div>
-      <!-- added -->
-      <div id="logincontainer">
+    <div id="masthead">
+      <div id="logincontainer ">
         <div id="loginbox">
           <h1 id="aTitle">get some room.</h1>
           <br>

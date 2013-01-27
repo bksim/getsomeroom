@@ -281,11 +281,8 @@ $app_name = idx($app_info, 'name', '');
                 <li><a href="#faq.html">faq</a></li>
               </ul>
 
-              <div class="nav-collapse pull-right" style="width:150px;">
-                <?php
-                  $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';
-                ?>
-                <img src="<? echo $pictureurl; ?>" width="35" height="35">&#160;&#160;&#160;
+
+              <ul class="nav pull-right">
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -293,7 +290,7 @@ $app_name = idx($app_info, 'name', '');
                     <li><a href="#">Logout</a></li>
                   </ul>
                 </li>
-              </div>
+              </ul>
             </div><!--/.nav-collapse -->
           </div>
         </div>

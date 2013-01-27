@@ -3,7 +3,8 @@
     $cityIntern = $_POST['inputCity']; // required
     $specificPartCity = $_POST['partCity'] //required
     $genderPref = $_POST['inputGender']; // required
-    $foundHousing = $_POST['inputFound']; // required
+    //$foundHousing = $_POST['inputFound']; // required
+    $foundHousing = FALSE;
     $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required
@@ -11,15 +12,15 @@
     $checkItemCook = $_POST['optionscheckboxs1']; // required
     $checkItemParty = $_POST['optionscheckboxs2'];//required
     $checkItemSmoke = $_POST['optionscheckboxs3'];
-    $quiet = False; //change later
-    $nightowl = False;
-    $morningbird = False;
+    $quiet = FALSE; //change later
+    $nightowl = FALSE;
+    $morningbird = FALSE;
 
     if ($cityIntern = "yes") {
-    	$cityIntern = True;
+    	$cityIntern = TRUE;
     }
     else{
-    	$cityIntern = False;
+    	$cityIntern = FALSE;
     }
 
 

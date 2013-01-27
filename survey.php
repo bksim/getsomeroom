@@ -29,8 +29,7 @@
     $db = pg_connect(pg_connection_string());
 
     #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
-    $sqlcommand = "INSERT INTO users VALUES (1, "Chang", "Ava", $college, $cityIntern, $specificPartCity, 
-	$genderPref,
+    $sqlcommand = "INSERT INTO users VALUES (1, 'Chang', 'Ava', $college, $cityIntern, $specificPartCity, $genderPref,
 	$foundHousing, 
 	$housingPref, 
 	$company, 

@@ -254,7 +254,7 @@ $app_name = idx($app_info, 'name', '');
     <![endif]-->
   </head>
 
-  <body>
+  <body id="masthead">
     <div id="fb-root"></div>
     <script type="text/javascript">
       window.fbAsyncInit = function() {
@@ -369,7 +369,6 @@ $app_name = idx($app_info, 'name', '');
 
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
-      <div id="masthead"></div>
       <div id="logincontainer ">
         <div id="loginbox">
           <h1 id="aTitle">get some room.</h1>

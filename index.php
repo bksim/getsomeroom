@@ -124,7 +124,7 @@ $app_name = idx($app_info, 'name', '');
     <script type="text/javascript">                                         
       $(function(){
         $("a[rel='tab']").click(function(e){
-        //e.preventDefault();
+          e.preventDefault();
           //get clicked link location
           pageurl = $(this).attr('href');
           alert(pageurl);
@@ -137,7 +137,7 @@ $app_name = idx($app_info, 'name', '');
           //change browser URL to given link location
           if(pageurl!=window.location){
             alert(pageurl);
-            
+
             window.history.pushState({path:pageurl},'',pageurl);
           }
 

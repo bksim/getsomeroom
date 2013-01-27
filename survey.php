@@ -11,12 +11,15 @@
     $checkItemCook = $_POST['optionscheckboxs1']; // required
     $checkItemParty = $_POST['optionscheckboxs2'];//required
     $checkItemSmoke = $_POST['optionscheckboxs3'];
+    $quiet = False; //change later
+    $nightowl = False;
+    $morningbird = False;
 
     if ($cityIntern = "yes") {
-    	$cityIntern = 0;
+    	$cityIntern = True;
     }
     else{
-    	$cityIntern = 1;
+    	$cityIntern = False;
     }
 
 
@@ -29,15 +32,17 @@
     $db = pg_connect(pg_connection_string());
 
     #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
-    $sqlcommand = "INSERT INTO users VALUES (1, 'Chang', 'Ava', $college, $cityIntern, $specificPartCity, $genderPref,
-	$foundHousing, 
-	$housingPref, 
-	$company, 
-	$internJob, 
-	$moreInfo, 
-	$checkItemCook, 
-	$checkItemParty, 
-	$checkItemSmoke)";
+    $sqlcommand = "INSERT INTO users VALUES (1, 
+    	'Chang', 
+    	'Ava', " . $college . ", " . $cityIntern . ", " .  $specificPartCity . ", " .  $genderPref . ", " . 
+	$foundHousing . ", " .  
+	$housingPref . ", " .  
+	$company . ", " .  
+	$internJob . ", " .  
+	$moreInfo . ", " .  
+	$checkItemCook . ", " .  
+	$checkItemParty . ", " .  
+	$checkItemSmoke . ", " . $quiet . ", " . $nightowl . ", " . $morningbird . ")";
 
     $result = pg_query($db, $sqlcommand);
     if (!$result) {

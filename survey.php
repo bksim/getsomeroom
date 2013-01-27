@@ -1,10 +1,13 @@
 	 <?php
 	$college = $_POST['inputCollege']; // required
     $cityIntern = $_POST['inputCity']; // required
+    $specificPartCity = $_POST['partCity'] //required
     $genderPref = $_POST['inputGender']; // required
     $foundHousing = $_POST['inputFound']; // required
+    $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required
+    $moreInfo = $_POST['moreinfo']; //required
     $checkItemCook = $_POST['optionscheckboxs1']; // required
     $checkItemParty = $_POST['optionscheckboxs2'];//required
     $checkItemSmoke = $_POST['optionscheckboxs3'];
@@ -19,9 +22,9 @@
 
     # This function reads your DATABASE_URL configuration automatically set by Heroku
     # the return value is a string that will work with pg_connect
-    /*function pg_connection_string() {
+    function pg_connection_string() {
       return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
-    }*/
+    }
     # Establish db connection
     $db = pg_connect(pg_connection_string());
 
@@ -62,6 +65,14 @@
 	      <input type="text" name="inputCity" placeholder="">
 	    </div>
 	  </div>
+
+	  <div class="control-group">
+	    <label class="control-label" for="partCity">part of city (for ex: Uptown)</label>
+	    <div class="controls">
+	      <input type="text" name="partCity" placeholder="">
+	    </div>
+	  </div>
+
 	  <div class="control-group">
 	    <label class="control-label" for="inputGender">gender roomate preference?</label>
 	    <div class="controls">
@@ -91,8 +102,17 @@
 	    <div class="controls">
 	      <input type="text" name="inputRole" placeholder="">
 	    </div>
+	  </div>
 
-	  </div><br>Check the items you agree with
+	  <div class="control-group">
+	    <label class="control-label" for="moreinfo">More Info</label>
+	    <div class="controls">
+	      <input type="text" name="moreinfo" placeholder="">
+	    </div>
+	  </div>
+
+
+	  <br>Check the items you agree with
 	  <br>
 	  <div class="control-group">
 

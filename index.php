@@ -94,8 +94,6 @@ $app_name = idx($app_info, 'name', '');
     <link rel="stylesheet" href="stylesheets/login.css" />
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="stylesheets/bootstrap-responsive.min.css" />
-    <link href="stylesheets/masthead.css" rel="stylesheet" type="text/css" media="screen" />
-
 
     <style>
       body {

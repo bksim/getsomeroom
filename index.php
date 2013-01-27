@@ -118,7 +118,7 @@ $app_name = idx($app_info, 'name', '');
     <meta property="og:description" content="My first app" />
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
-    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script> 
+    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script> 
     <script src="javascript/bootstrap.min.js"></script>
 
     <!-- HANDLE NAV BAR NAVIGATION USING AJAX CALLS, HTML5-COMPLIANT-->
@@ -352,7 +352,7 @@ $app_name = idx($app_info, 'name', '');
 
 
             <ul class="nav pull-right" style="width:15%;">
-              <?php $pictureurl = 'http://graph.facebook.com/' . $basic['id'] . '/picture';?>
+              <?php $pictureurl = 'https://graph.facebook.com/' . $basic['id'] . '/picture';?>
               <img src="<? echo $pictureurl; ?>" width="35" height="35">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
@@ -388,7 +388,7 @@ $app_name = idx($app_info, 'name', '');
             <a class="addthis_button_tweet" style="width:69px;"></a>
           </div>
           <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-          <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50552bd1589c29ce"></script>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50552bd1589c29ce"></script>
           <!-- AddThis Button END -->
         </div>
       </div>

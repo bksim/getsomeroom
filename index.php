@@ -135,11 +135,11 @@ $app_name = idx($app_info, 'name', '');
           }});
 
           //change browser URL to given link location
-          if(pageurl!=window.location){
+          /*if(pageurl!=window.location){
             alert(pageurl);
 
             window.history.pushState({path:pageurl},'',pageurl);
-          }
+          }*/
 
           //stop refreshing to page   
           return false;
@@ -147,11 +147,11 @@ $app_name = idx($app_info, 'name', '');
       });
 
       //override back button to get ajax content
-      $(window).bind('popstate', function(){
+      /*$(window).bind('popstate', function(){
         $.ajax({url:location.pathname+'?rel=tab',success: function(data){
           $('#main').html(data);
         }});
-      });                          
+      });*/                          
     </script>
     <!--END NAV BAR HANDLING-->
 

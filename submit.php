@@ -9,9 +9,13 @@
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required
     $moreInfo = $_POST['moreinfo']; //required
-    $checkItemCook = $_POST['optionscheckboxs1']; // required
+    /*$checkItemCook = $_POST['optionscheckboxs1']; // required
     $checkItemParty = $_POST['optionscheckboxs2'];//required
-    $checkItemSmoke = $_POST['optionscheckboxs3'];
+    $checkItemSmoke = $_POST['optionscheckboxs3'];*/
+
+    $checkItemCook = FALSE;
+    $checkItemParty = FALSE;
+    $checkItemSmoke = FALSE;
     $quiet = FALSE; //change later
     $nightowl = FALSE;
     $morningbird = FALSE;
@@ -33,7 +37,6 @@
     $db = pg_connect(pg_connection_string());
     
         #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
-
     $query_insert = "INSERT INTO users VALUES (5,
     	'Chang',
     	'Ava',
@@ -53,7 +56,7 @@
     	$morningbird)";
 
 
-    $result = pg_query($dbc, $query_insert);
+    $result = pg_query($db, $query_insert);
 
     if (!$result) {
       die("Error in SQL query: " . pg_last_error());

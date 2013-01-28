@@ -5,7 +5,7 @@
   document.getElementById("firstname").value=temp[0];
 });</script>
 
-<div id = "theForm" style="padding-left: 350px; padding-right: 400px; font-weight: 900; overflow-y:auto; width: auto; height: 500px;">
+<div id = "theForm" style="padding-left: 350px; padding-right: 400px; font-weight: 900; overflow-y:auto; width: auto; height: 500px; color:#FFFFFF;">
 
   <form action="submit.php" method=post class="form-horizontal">  
     <input type="hidden" id="fbid" name="fbid" value="">

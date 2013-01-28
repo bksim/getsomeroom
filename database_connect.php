@@ -1,6 +1,7 @@
 <?php 
     $name = $_POST['name'];
     $id = $_POST['id'];
+    $gender = $_POST['gender'];
 
     # This function reads your DATABASE_URL configuration automatically set by Heroku
     # the return value is a string that will work with pg_connect
@@ -45,13 +46,24 @@
     # if user had filled out the profile and had put a city...
     if (isset($city))
     {
-        $resultstring = "<hr>";
+        if ($gender == "female")
+        {
+            $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . " ORDER BY genderpref ASC;";
+        }
+
+        else
+        {
+            $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . " ORDER BY genderpref DESC;";
+        }
+
+        $resultstring = "Displaying all users interning in same city in order of compatibility: <hr>";
         # gets everyone who put the same city except the user him/herself
-        $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
+        //$query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
         $result_city = pg_query($db, $query_samecity);
         while ($row_samecity = pg_fetch_assoc($result_city))
         {
             $resultstring .= print_match_result($row_samecity);
+            $resultstring .= "<hr>";
         }
         echo $resultstring;
     }

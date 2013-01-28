@@ -8,7 +8,7 @@
 
     $.post(
       "database_connect.php",
-      { "name": response.name, "id": response.id},
+      { "name": response.name, "id": response.id, "gender": response.gender },
       function(data){
         if (data){
           //if data is not null

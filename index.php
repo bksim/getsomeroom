@@ -107,10 +107,14 @@ if ($user_id) {
           //alert(pageurl);
           //console.log("here");
           //update the div appropriately
-          $.ajax({url:pageurl+'?rel=tab',success: function(data){
+          
+          /*$.ajax({url:pageurl+'?rel=tab',success: function(data){
+            $('#main').html(data);
+          }});*/
+
+$.ajax({url:pageurl,success: function(data){
             $('#main').html(data);
           }});
-
           //change browser URL to given link location
           /*if(pageurl!=window.location){
             alert(pageurl);

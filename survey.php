@@ -28,6 +28,7 @@
       <option value="CHI">Chicago, IL</option>
       <option value="HK">Hong Kong, HK</option>
       <option value="LON">London, UK</option>
+      <option value="LA"> Los Angeles, CA</option>
       <option value="NY">New York, NY</option>
       <option value="PA">Palo Alto, CA</option>
       <option value="PHI">Philadelphia, PA</option>

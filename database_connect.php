@@ -1,7 +1,7 @@
 <?php 
     $name = $_POST['name'];
     $id = $_POST['id'];
-    echo $id;
+
     # This function reads your DATABASE_URL configuration automatically set by Heroku
     # the return value is a string that will work with pg_connect
     function pg_connection_string() {
@@ -11,17 +11,10 @@
     # Establish db connection
     $db = pg_connect(pg_connection_string());
 
+    $sqlquery = "SELECT * FROM users WHERE fbid=" . $id;
+    $result = pg_query($db, $sqlquery);
+    echo $result;
 
-
-
-
-    //$sqlquery = "SELECT * FROM users WHERE ";
-    //$result = pg_query($db, $sqlquery);
-    //echo $result;
-
-    // close connection
+    //close connection
     pg_close($db);
-
-
-
 ?>

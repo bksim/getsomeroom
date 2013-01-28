@@ -356,15 +356,16 @@ $app_name = idx($app_info, 'name', '');
     </div>
 
 
-<script type="text/javascript">
-$(function(){
-  // overwrite the fb connect image - let's force it !!
-  $('.fbconnect_login_button').find('img').attr('src', 'images/facebooklogin.png.jpg');
-});
-</script>
-
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
+
+  //   <script type="text/javascript">
+  //   $(function(){
+  // // overwrite the fb connect image - let's force it !!
+  //   $('.FB_login_button').find('img').attr('src', 'images/fblogin.jpg');
+  //   });
+  //   </script>
+
       <div id="logincontainer ">
         <div id="loginbox">
           <h1 id="aTitle">get some room.</h1>
@@ -375,7 +376,30 @@ $(function(){
           <div id="login-flow" style="padding-left:30px;">
             <!-- <fb:login-button size="xlarge" perms="email,offline_access" show-faces="false" onlogin="Log.info('onlogin callback')" style="font-family:'Franklin Gothic Medium' background-color:#00009C;">
               Sign Up With Facebook</fb:login-button> -->
-              <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+              <!-- <div class="fb-login-button" data-scope="user_likes,user_photos"></div> -->
+
+              <div id='login'><a href="#" id='facebook-login' onclick='fblogin();'><img src="images/fblogin.jpg" /></a></div>
+              </a>
+              <script>
+              function fblogin(){
+                FB.login(function(response) {
+                   if (response.session) {
+                if (response.perms) {
+                    // user is logged in and granted some permissions.
+                    // perms is a comma separated list of granted permissions
+                    window.location.reload();
+                } else {
+                    // user is logged in, but did not grant any permissions
+                    window.location.reload();
+                }
+            } else {
+                // user is not logged in
+                window.location.reload();
+            }
+        }, {perms:'email'});
+        return false;
+    }
+</script>
               <!--<a href="#" onclick="oauth_login_url;"><img src="images/facebooklogin.jpg" border="0" alt=""></a> -->
           </div>
           <div class="addthis_toolbox addthis_default_style " style="margin:0 auto;margin-top:20px;width:155px;">

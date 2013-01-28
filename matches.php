@@ -166,7 +166,7 @@ $app_name = idx($app_info, 'name', '');
 <script> 
   // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
   FB.api('/me', function(response) {
-    $('#title').html("<h1>Time for you to getsomeroom, " + response.name"</h1>");
+    $('#title').html("<h1>Time for you to getsomeroom, " + response.name + "</h1>");
 
     $.post(
       "database_connect.php",

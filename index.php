@@ -285,41 +285,6 @@ $app_name = idx($app_info, 'name', '');
     <!-- IF USER IS LOGGED IN AND BASIC IS SET -->
     <?php if (isset($basic)) { ?>
 
-    <?php
-    #foreach ($basic as $value){
-    #  echo $value;
-    #  echo "<br/>";
-    #}
-
-    # This function reads your DATABASE_URL configuration automatically set by Heroku
-    # the return value is a string that will work with pg_connect
-    function pg_connection_string() {
-      return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
-    }
-    # Establish db connection
-    $db = pg_connect(pg_connection_string());
-
-    $sqlcommand = "SELECT * FROM users";
-    $result = pg_query($db, $sqlcommand);
-    if (!$result) {
-      die("Error in SQL query: " . pg_last_error());
-    }
-
-    // iterate over result set
-    // print each row
-    /*while ($row = pg_fetch_array($result)) {
-       echo "FBID: " . $row[0] . "<br />";
-       echo "email: " . $row[1] . "<p />";
-    }
-
-    // free memory
-    pg_free_result($result);*/      
-
-    // close connection
-    pg_close($db);
-
-    ?>
-
     <!-- NAV BAR ONLY IF LOGGED IN -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -358,13 +323,6 @@ $app_name = idx($app_info, 'name', '');
 
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
-
-  //   <script type="text/javascript">
-  //   $(function(){
-  // // overwrite the fb connect image - let's force it !!
-  //   $('.FB_login_button').find('img').attr('src', 'images/fblogin.jpg');
-  //   });
-  //   </script>
 
       <div id="logincontainer ">
         <div id="loginbox">

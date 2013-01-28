@@ -170,7 +170,7 @@ $app_name = idx($app_info, 'name', '');
       "database_connect.php",
       { "name": response.name, "id": response.id},
       function(data){
-        if (!data){
+        if (data){
           //if data is not null
           $('#matches').html(data);
         }

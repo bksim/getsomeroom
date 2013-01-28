@@ -28,7 +28,7 @@
         $resultstring = "<hr>";
         # gets everyone who put the same city except the user him/herself
         $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
-        $result_city = pg_query($db, $query_samecity);
+        //$result_city = pg_query($db, $query_samecity);
         /*while ($row_samecity = pg_fetch_assoc($result_city))
         {
             $resultstring = $resultstring . $row_samecity['firstname'] . " " . 

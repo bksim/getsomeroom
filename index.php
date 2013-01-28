@@ -356,15 +356,16 @@ $app_name = idx($app_info, 'name', '');
     </div>
 
 
-<script type="text/javascript">
-$(function(){
-  // overwrite the fb connect image - let's force it !!
-  $('.fbconnect_login_button').find('img').attr('src', 'images/fblogin.jpg');
-});
-</script>
-
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
+
+    <script type="text/javascript">
+    $(function(){
+  // overwrite the fb connect image - let's force it !!
+    $('.fbconnect_login_button').find('img').attr('src', 'images/fblogin.jpg');
+    });
+    </script>
+
       <div id="logincontainer ">
         <div id="loginbox">
           <h1 id="aTitle">get some room.</h1>

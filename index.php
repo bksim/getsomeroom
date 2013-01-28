@@ -259,7 +259,7 @@ if ($user_id) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">get some room</a>
+          <a class="brand" href="index.php">get some room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="matches.php"rel="tab">matches</a></li>

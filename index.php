@@ -259,7 +259,7 @@ if ($user_id) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">get some room</a>
+          <a class="brand" href="matches.php">get some room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="matches.php"rel="tab">matches</a></li>
@@ -318,6 +318,9 @@ if ($user_id) {
                     // user is logged in and granted some permissions.
                     // perms is a comma separated list of granted permissions
                     window.location.reload();
+                    $.ajax({url:'matches.php',success: function(data){
+                      $('#main').html(data);
+                    }});
                 } else {
                     // user is logged in, but did not grant any permissions
                     window.location.reload();

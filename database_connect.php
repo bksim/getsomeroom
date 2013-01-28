@@ -30,8 +30,13 @@
         $result_city = pg_query($db, $query_samecity);
         while ($row_samecity = pg_fetch_assoc($result_city))
         {
+            //add picture
+            $resultstring = $resultstring . "<img src='https://graph.facebook.com/" . $row_samecity['fbid'] . "/picture?type=square'>";
+
+            $resultstring = $resultstring . "<br/>";
+            //add link to profile and info
             $resultstring = $resultstring . "<a href='https://www.facebook.com/" . $row_samecity['fbid'] . "'>" . 
-            $row_samecity['firstname'] . $row_samecity['lastname'] . "</a>" . ", " . $row_samecity['college'] . "<hr>";
+            $row_samecity['firstname'] . " " . $row_samecity['lastname'] . "</a>" . ", " . $row_samecity['college'] . "<hr>";
         }
         echo $resultstring;
     }

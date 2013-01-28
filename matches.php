@@ -162,21 +162,23 @@ $app_name = idx($app_info, 'name', '');
   </div>
 </section>
 
-<script> 
-  // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
-  FB.api('/me', function(response) {
-    $.post(
-      "database_connect.php",
-      { "name": response.name, "id": response.id},
-      function(data){
-        console.log(data);
-      }
-    );
-  });
-</script>
-
 <section id="samples" class="clearfix">
   <div id="matches">
     bla bla bla stuff here
+      <script> 
+      // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
+      FB.api('/me', function(response) {
+        $.post(
+          "database_connect.php",
+          { "name": response.name, "id": response.id},
+          function(data){
+            if (!data){
+              //if data is not null
+              document.write(data);
+            }
+          }
+        );
+      });
+    </script>
   </div>
 </section>

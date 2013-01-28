@@ -11,12 +11,32 @@
     # Establish db connection
     $db = pg_connect(pg_connection_string());
 
-    $sqlquery = "SELECT * FROM users WHERE fbid=" . $id;
+    # retrieves the city that the user is interning in
+    $sqlquery = "SELECT * FROM users WHERE fbid=" . $id . ";";
     $result = pg_query($db, $sqlquery);
 
     while($row=pg_fetch_assoc($result))
     {
-        echo $row['college'] . $row['cityintern'];
+        $city = $row['cityintern'];
+    }
+
+    # if user had filled out the profile and had put a city...
+    if isset($city)
+    {
+        $resultstring = "<hr>";
+        # gets everyone who put the same city except the user him/herself
+        $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
+        $result_city = pg_query($db, $query_samecity);
+        while ($row_samecity = pg_fetch_assoc($result_city))
+        {
+            $resultstring = $resultstring . $row_samecity['firstname'] . " " . 
+            $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";
+        }
+        echo $resultstring;
+    }
+
+    else{
+        echo "Please fill in your profile first so we can find you matches!";
     }
 
     //close connection

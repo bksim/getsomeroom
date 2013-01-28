@@ -32,7 +32,6 @@
         {
             $resultstring = $resultstring . $row_samecity['firstname'] . " " . 
             $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";
-            $resultstring = $resultstring . $row_samecity['firstname'];
         }
         echo $resultstring;
     }

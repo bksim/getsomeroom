@@ -359,7 +359,7 @@ $app_name = idx($app_info, 'name', '');
 <script type="text/javascript">
 $(function(){
   // overwrite the fb connect image - let's force it !!
-  $('.fbconnect_login_button').find('img').attr('src', 'images/facebooklogin.png.jpg');
+  $('.fbconnect_login_button').find('img').attr('src', 'images/fblogin.jpg');
 });
 </script>
 

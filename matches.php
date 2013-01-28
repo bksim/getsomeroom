@@ -8,10 +8,10 @@ require('AppInfo.php');
 require('utils.php');
 
 // Enforce https on production
-if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
+/*if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
   header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
   exit();
-}
+}*/
 
 /*****************************************************************************
  *
@@ -180,8 +180,9 @@ $app_name = idx($app_info, 'name', '');
 </script>
 
 <section id="samples" class="clearfix">
+  <h1>Time for you to getsomeroom, <?php echo $basic['name'];?></h1>
   <div id="matches">
-    bla bla bla stuff here
+    we're looking for your matches...
   </div>
 
 </section>

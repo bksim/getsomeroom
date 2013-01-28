@@ -21,7 +21,7 @@
     }
 
     echo $city;
-    /*
+    
     # if user had filled out the profile and had put a city...
     if isset($city)
     {
@@ -31,8 +31,9 @@
         $result_city = pg_query($db, $query_samecity);
         while ($row_samecity = pg_fetch_assoc($result_city))
         {
-            $resultstring = $resultstring . $row_samecity['firstname'] . " " . 
-            $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";
+            /*$resultstring = $resultstring . $row_samecity['firstname'] . " " . 
+            $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";*/
+            $resultstring = $resultstring . $row_samecity['firstname'];
         }
         echo $resultstring;
     }
@@ -40,7 +41,7 @@
     else{
         echo "Please fill in your profile first so we can find you matches!";
     }
-*/
+
     //close connection
     pg_close($db);
 ?>

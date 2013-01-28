@@ -29,12 +29,12 @@
         # gets everyone who put the same city except the user him/herself
         $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
         $result_city = pg_query($db, $query_samecity);
-        while ($row_samecity = pg_fetch_assoc($result_city))
+        /*while ($row_samecity = pg_fetch_assoc($result_city))
         {
-            /*$resultstring = $resultstring . $row_samecity['firstname'] . " " . 
-            $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";*/
-            //$resultstring = $resultstring . $row_samecity['firstname'];
-        }
+            $resultstring = $resultstring . $row_samecity['firstname'] . " " . 
+            $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";
+            $resultstring = $resultstring . $row_samecity['firstname'];
+        }*/
         echo $resultstring;
     }
 

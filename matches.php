@@ -23,6 +23,6 @@
 <div id="match-container" style="color:#FFFFFF;">
   <div id="title"></div>
   <div id="matches">
-    we're looking for your matches...
+    <img src="images/ajax_loader.gif" style="margin-left:auto; margin-right:auto;">
   </div>
 </div>

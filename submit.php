@@ -2,7 +2,7 @@
     $lastname = $_POST['lastname'];
     $firstname = $_POST['firstname'];
     $fbid = (int)$_POST['fbid'];
-	$college = $_POST['inputCollege']; 
+    $college = $_POST['inputCollege']; 
     $cityIntern = $_POST['formCity'];
     $specificPartCity = $_POST['partCity']; 
     $genderPref = $_POST['inputGender']; 
@@ -34,8 +34,8 @@
     # the return value is a string that will work with pg_connect
     function pg_connection_string() {
       return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
-    }
-    # Establish db connection
+
+      # Establish db connection
     $db = pg_connect(pg_connection_string());
     
     // NEED TO CHECK IF FBID ALREADY EXISTS IN DATABASE
@@ -43,23 +43,23 @@
 
         #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
     $query_insert = "INSERT INTO users VALUES (" . $fbid . ",
-    	'$lastname',
-    	'$firstname',
-    	'$college',
-    	'$cityIntern',
-    	'$specificPartCity',
-    	'$genderPref',
-    	'$foundHousing',
-    	'$housingPref',
-    	'$company',
-    	'$internJob',
-    	'$moreInfo', 
+        '$lastname',
+        '$firstname',
+        '$college',
+        '$cityIntern',
+        '$specificPartCity',
+        '$genderPref',
+        '$foundHousing',
+        '$housingPref',
+        '$company',
+        '$internJob',
+        '$moreInfo', 
         '$checkItemCook',
-    	'$checkItemParty', 
-    	'$checkItemSmoke',
-    	'$checkItemQuiet',
-    	'$checkItemNightOwl',
-    	'$checkItemMorningBird')";
+        '$checkItemParty', 
+        '$checkItemSmoke',
+        '$checkItemQuiet',
+        '$checkItemNightOwl',
+        '$checkItemMorningBird')";
 
 
 

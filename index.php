@@ -318,9 +318,9 @@ if ($user_id) {
                     // user is logged in and granted some permissions.
                     // perms is a comma separated list of granted permissions
                     window.location.reload();
-                    $.ajax({url:'matches.php',success: function(data){
+                    /*$.ajax({url:'matches.php',success: function(data){
                       $('#main').html(data);
-                    }});
+                    }});*/
                 } else {
                     // user is logged in, but did not grant any permissions
                     window.location.reload();

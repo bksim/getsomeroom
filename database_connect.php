@@ -20,7 +20,14 @@
         $city = $row['cityintern'];
     }
     
-    echo isset($city);
+    if isset($city)
+    {
+        echo $city;
+    }
+
+    else{
+        echo "wtf";
+    }
     # if user had filled out the profile and had put a city...
     /*if isset($city)
     {

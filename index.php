@@ -225,7 +225,7 @@ $.ajax({url:pageurl,success: function(data){
 
         // Listen to the auth.login which will be called when the user logs in
         // using the Login button
-        /*FB.Event.subscribe('auth.login', function(response) {
+        FB.Event.subscribe('auth.login', function(response) {
           // We want to reload the page now so PHP can read the cookie that the
           // Javascript SDK sat. But we don't want to use
           // window.location.reload() because if this is in a canvas there was a
@@ -233,7 +233,7 @@ $.ajax({url:pageurl,success: function(data){
           // user asking if they want to send data again.
           console.log(response);
           window.location = window.location;
-        });*/
+        });
 
         FB.Canvas.setAutoGrow();
       };

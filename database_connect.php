@@ -20,6 +20,7 @@
         $city = $row['cityintern'];
     }
 
+    /*
     # if user had filled out the profile and had put a city...
     if isset($city)
     {
@@ -38,7 +39,7 @@
     else{
         echo "Please fill in your profile first so we can find you matches!";
     }
-
+*/
     //close connection
     pg_close($db);
 ?>

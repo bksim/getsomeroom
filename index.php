@@ -297,7 +297,7 @@ $app_name = idx($app_info, 'name', '');
           <a class="brand" href="/">get some room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="/" rel="tab">matches</a></li>
+              <li><a href="matches.php"rel="tab">matches</a></li>
               <li><a href="survey.php" rel="tab">view/edit profile</a></li>
               <li><a href="about.php" rel="tab">about</a></li>
               <li><a href="faq.php" rel="tab">faq</a></li>
@@ -323,7 +323,7 @@ $app_name = idx($app_info, 'name', '');
 
        <div class="container" style="padding-top: 12px; margin-top: 15px; margin-left: 20px; margin-right: 20px; 
        padding-bottom: 70px; padding-left: 20px; padding-right: 20px; width: auto; height: 500px; 
-       z-index: 60; background-color: #A3A3A3; opacity:0.85;">
+       z-index: 60; background-color: #000000; opacity:0.85;">
         <h6> just testing. </h6>
 
       </div> <!-- /container -->
@@ -378,141 +378,6 @@ $app_name = idx($app_info, 'name', '');
         </div>
       </div>
     <?php } ?>
-
-    <!--USER ID EXISTS -->
-
-    <?php
-      if ($user_id) {
-    ?>
-
-
-    <div id="main">
-      <section id="samples" class="clearfix">
-        <h1>Time for you to getsomeroom, <?php echo $basic['name'];?></h1>
-
-        <div class="list">
-          <h3>A few of your friends</h3>
-          <ul class="friends">
-            <?php
-              foreach ($friends as $friend) {
-                // Extract the pieces of info we need from the requests above
-                $id = idx($friend, 'id');
-                $name = idx($friend, 'name');
-            ?>
-            <li>
-              <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-                <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
-                <?php echo he($name); ?>
-              </a>
-            </li>
-            <?php
-              }
-            ?>
-          </ul>
-        </div>
-
-        <div class="list inline">
-          <h3>Recent photos</h3>
-          <ul class="photos">
-            <?php
-              $i = 0;
-              foreach ($photos as $photo) {
-                // Extract the pieces of info we need from the requests above
-                $id = idx($photo, 'id');
-                $picture = idx($photo, 'picture');
-                $link = idx($photo, 'link');
-
-                $class = ($i++ % 4 === 0) ? 'first-column' : '';
-            ?>
-            <li style="background-image: url(<?php echo he($picture); ?>);" class="<?php echo $class; ?>">
-              <a href="<?php echo he($link); ?>" target="_top"></a>
-            </li>
-            <?php
-              }
-            ?>
-          </ul>
-        </div>
-
-        <div class="list">
-          <h3>Things you like</h3>
-          <ul class="things">
-            <?php
-              foreach ($likes as $like) {
-                // Extract the pieces of info we need from the requests above
-                $id = idx($like, 'id');
-                $item = idx($like, 'name');
-
-                // This display's the object that the user liked as a link to
-                // that object's page.
-            ?>
-            <li>
-              <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-                <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($item); ?>">
-                <?php echo he($item); ?>
-              </a>
-            </li>
-            <?php
-              }
-            ?>
-          </ul>
-        </div>
-
-        <div class="list">
-          <h3>Friends using this app</h3>
-          <ul class="friends">
-            <?php
-              foreach ($app_using_friends as $auf) {
-                // Extract the pieces of info we need from the requests above
-                $id = idx($auf, 'uid');
-                $name = idx($auf, 'name');
-            ?>
-            <li>
-              <a href="https://www.facebook.com/<?php echo he($id); ?>" target="_top">
-                <img src="https://graph.facebook.com/<?php echo he($id) ?>/picture?type=square" alt="<?php echo he($name); ?>">
-                <?php echo he($name); ?>
-              </a>
-            </li>
-            <?php
-              }
-            ?>
-          </ul>
-        </div>
-      </section>
-    </div>
-
-    <?php
-      }
-    ?>
-
-    <!--
-    <section id="guides" class="clearfix">
-      <h1>Learn More About Heroku &amp; Facebook Apps</h1>
-      <ul>
-        <li>
-          <a href="https://www.heroku.com/?utm_source=facebook&utm_medium=app&utm_campaign=fb_integration" target="_top" class="icon heroku">Heroku</a>
-          <p>Learn more about <a href="https://www.heroku.com/?utm_source=facebook&utm_medium=app&utm_campaign=fb_integration" target="_top">Heroku</a>, or read developer docs in the Heroku <a href="https://devcenter.heroku.com/" target="_top">Dev Center</a>.</p>
-        </li>
-        <li>
-          <a href="https://developers.facebook.com/docs/guides/web/" target="_top" class="icon websites">Websites</a>
-          <p>
-            Drive growth and engagement on your site with
-            Facebook Login and Social Plugins.
-          </p>
-        </li>
-        <li>
-          <a href="https://developers.facebook.com/docs/guides/mobile/" target="_top" class="icon mobile-apps">Mobile Apps</a>
-          <p>
-            Integrate with our core experience by building apps
-            that operate within Facebook.
-          </p>
-        </li>
-        <li>
-          <a href="https://developers.facebook.com/docs/guides/canvas/" target="_top" class="icon apps-on-facebook">Apps on Facebook</a>
-          <p>Let users find and connect to their friends in mobile apps and games.</p>
-        </li>
-      </ul>
-    </section>-->
-  </body>
 
   <?php include 'footer.php'?>
 </html>

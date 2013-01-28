@@ -20,16 +20,9 @@
         $city = $row['cityintern'];
     }
     
-    if isset($city)
-    {
-        echo $city;
-    }
 
-    else{
-        echo "wtf";
-    }
     # if user had filled out the profile and had put a city...
-    /*if isset($city)
+    if (isset($city))
     {
         $resultstring = "<hr>";
         # gets everyone who put the same city except the user him/herself
@@ -46,7 +39,7 @@
 
     else{
         echo "Please fill in your profile first so we can find you matches!";
-    }*/
+    }
 
     //close connection
     pg_close($db);

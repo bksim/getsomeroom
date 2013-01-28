@@ -1,3 +1,6 @@
+
+
+
 <script> 
   // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
   FB.api('/me', function(response) {
@@ -22,7 +25,7 @@
 
 <section id="samples" class="clearfix">
   <div id="title"></div>
-  <div id="matches">
+  <div id="matches" style="overflow-y:auto;">
     we're looking for your matches...
   </div>
 

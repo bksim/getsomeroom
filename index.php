@@ -279,8 +279,8 @@ $.ajax({url:pageurl,success: function(data){
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Profile</a></li>
-                  <li><a href="#">Logout</a></li>
+                  <li><a href="survey.php" rel="tab">Profile</a></li>
+                  <li><a href="logout.php" rel="tab">Logout</a></li>
                 </ul>
               </li>
             </ul>
@@ -300,7 +300,7 @@ $.ajax({url:pageurl,success: function(data){
        <br>
        
        <h4>
-          <dl style="color: #FFFFFF; font-size: 14px;">
+          <dl style="color: #FFFFFF; font-size: 14px;"> 
             <dt style="color:#B23AEE;">Start searching by editing your profile.</dt>
             <dd>Click "view/edit profile" in the navigation bar to fill out some basic information about yourself. We'll use the information to search up the best matches for you.</dd>
               <br>

@@ -1,4 +1,54 @@
 <?php
+
+/*added to database*/
+/*
+
+CREATE FUNCTION merge_db(fb_id BIGINT, last_name TEXT, first_name TEXT, college_v TEXT, cityintern_v TEXT, speccity TEXT, gender TEXT, 
+found_housing BOOLEAN, housing_pref TEXT, comp TEXT, intern_job TEXT, more_info TEXT, cook BOOLEAN, party BOOLEAN, smoke BOOLEAN, 
+quiet BOOLEAN, night BOOLEAN, morning BOOLEAN) RETURNS VOID AS
+$$
+BEGIN
+    LOOP
+        -- first try to update the key
+        UPDATE users SET lastname = last_name, 
+        firstname = first_name,
+        college = college_v,
+        cityintern = cityintern_v,
+        specificpartcity = speccity,
+        genderpref = gender,
+        foundhousing = found_housing,
+        housingpref = housing_pref,
+        company = comp,
+        internjob = intern_job,
+        moreinfo = more_info,
+        checkitemcook = cook,
+        checkitemsmoke = smoke,
+        checkitemquiet = quiet,
+        checkitemnightowl = night,
+        checkitemmorningbird = morning 
+        WHERE fbid = fb_id;
+        IF found THEN
+            RETURN;
+        END IF;
+        -- not there, so try to insert the key
+        -- if someone else inserts the same key concurrently,
+        -- we could get a unique-key failure
+        BEGIN
+            INSERT INTO users(fbid,lastname,firstname,college,cityintern,specificpartcity,genderpref,
+            foundhousing,housingpref,company,internjob,moreinfo,checkitemcook,checkitemsmoke,
+            checkitemquiet,checkitemnightowl,checkitemmorningbird) 
+            VALUES (fb_id, last_name, first_name, college_v, cityintern_v, speccity, gender, found_housing, housing_pref, comp,
+            intern_job, more_info, cook, smoke, quiet, night, morning);
+            RETURN;
+        EXCEPTION WHEN unique_violation THEN
+            -- Do nothing, and loop to try the UPDATE again.
+        END;
+    END LOOP;
+END;
+$$
+LANGUAGE plpgsql;
+*/
+
     $lastname = $_POST['lastname'];
     $firstname = $_POST['firstname'];
     $fbid = (int)$_POST['fbid'];
@@ -38,10 +88,29 @@
       # Establish db connection
     $db = pg_connect(pg_connection_string());
     
-    // NEED TO CHECK IF FBID ALREADY EXISTS IN DATABASE
+    // FUNCTION ABOVE CHECKS IF FBID ALREADY EXISTS IN DATABASE
     //IF SO USE UPDATE INSTEAD OF INSERT
 
-        #NOTE: DIDN'T INSERT THEIR FIRST/LAST NAMES OR FBID
+    $query_insert = "SELECT merge_db(" . $fbid . ",
+        '$lastname',
+        '$firstname',
+        '$college',
+        '$cityIntern',
+        '$specificPartCity',
+        '$genderPref',
+        '$foundHousing',
+        '$housingPref',
+        '$company',
+        '$internJob',
+        '$moreInfo', 
+        '$checkItemCook',
+        '$checkItemParty', 
+        '$checkItemSmoke',
+        '$checkItemQuiet',
+        '$checkItemNightOwl',
+        '$checkItemMorningBird');";
+
+    /*
     $query_insert = "INSERT INTO users VALUES (" . $fbid . ",
         '$lastname',
         '$firstname',
@@ -59,7 +128,7 @@
     	'$checkItemSmoke',
     	'$checkItemQuiet',
     	'$checkItemNightOwl',
-    	'$checkItemMorningBird')";
+    	'$checkItemMorningBird')";*/
 
     $result = pg_query($db, $query_insert);
 

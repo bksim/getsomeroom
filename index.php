@@ -376,7 +376,7 @@ $app_name = idx($app_info, 'name', '');
           <div id="login-flow" style="padding-left:30px;">
             <!-- <fb:login-button size="xlarge" perms="email,offline_access" show-faces="false" onlogin="Log.info('onlogin callback')" style="font-family:'Franklin Gothic Medium' background-color:#00009C;">
               Sign Up With Facebook</fb:login-button> -->
-              <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+              <!-- <div class="fb-login-button" data-scope="user_likes,user_photos"></div> -->
 
               <div id='login'><a href="#" id='facebook-login' onclick='fblogin();'><img src="images/fblogin.jpg" /></a></div>
               </a>

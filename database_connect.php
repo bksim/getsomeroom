@@ -20,26 +20,26 @@
         $city = $row['cityintern'];
     }
     
+    echo $city;
     # if user had filled out the profile and had put a city...
-    if isset($city)
+    /*if isset($city)
     {
-        //$resultstring = "<hr>";
+        $resultstring = "<hr>";
         # gets everyone who put the same city except the user him/herself
-        //$query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
-        //$result_city = pg_query($db, $query_samecity);
-        /*while ($row_samecity = pg_fetch_assoc($result_city))
+        $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
+        $result_city = pg_query($db, $query_samecity);
+        while ($row_samecity = pg_fetch_assoc($result_city))
         {
             $resultstring = $resultstring . $row_samecity['firstname'] . " " . 
             $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";
             $resultstring = $resultstring . $row_samecity['firstname'];
-        }*/
-        //echo $resultstring;
-        echo $city;
+        }
+        echo $resultstring;
     }
 
     else{
         echo "Please fill in your profile first so we can find you matches!";
-    }
+    }*/
 
     //close connection
     pg_close($db);

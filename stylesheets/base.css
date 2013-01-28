@@ -6,13 +6,14 @@
 /* =global elements
 --------------------------------------------- */
 body {
-  color: #999;
-  font: 14px/1.5em "Garamond", Arial, sans-serif;
+  color: #FFFFFF;
+  /*font: 14px/1.5em "Garamond", Arial, sans-serif;*/
   -webkit-font-smoothing: antialiased;
   /*width: 720px;*/
   margin-left:auto;
   margin-right:auto;
   margin: 20px;
+  padding-top: 60px;
 }
 
 /*a:link, a:visited {
@@ -26,12 +27,21 @@ body {
 }*/
 
 h1 {
-  color: #656565;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
+  color: #FFFFFF;
+  /*font-family: "Helvetica Neue", Arial, sans-serif;*/
+  /*font-size: 18px;*/
+  font-weight: bolder;
 }
 
+h3{
+color:#B23AEE
+/*font-family: "Helvetica Neue", Arial, sans-serif;*/
+font-weight: bold;
+}
+h4{
+color:#FFFFFF;
+/*font-family: "Helvetica Neue", Arial, sans-serif;*/
+}
 /* ------------------------------------------ */
 
 /* =header
@@ -67,6 +77,13 @@ header #picture {
 
 header .tagline {
   float: left;
+}
+
+#welcome {
+margin-right: 140px;
+margin-left: 140px;
+
+
 }
 
 #share-app {

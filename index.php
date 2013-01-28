@@ -286,11 +286,31 @@ if ($user_id) {
     </div>
 
 
-       <div class="container" id="main" style="padding-top: 12px; margin-bottom: 20px; margin-top: 15px; margin-left: 20px; margin-right: 20px; 
+       <div class="container" id="main" style="padding-top: 12px; margin-bottom: 20px; margin-top: 15px; margin-left: 90px; margin-right: 90px; 
        padding-bottom: 70px; padding-left: 20px; padding-right: 20px; width: auto; height: 500px; 
        z-index: 60; background-color: #000000; opacity:0.85; border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;">
-        <h6> INSTRUCTIONS GO HERE!! </h6>
-
+       <br>
+       <div id = "welcome">
+       <h2 style="color:#FFFFFF; font-size: 24px; font-weight: bolder; "> Welcome to Get Some Room,  <?php echo $basic['name'];?>. </h2> 
+       <h3 style="font-size: 18px; color: #463E3F;"> Follow these steps to set up/edit your profile and find potential roommates matches no matter what city you'll be interning in.</h3>
+       <br>
+       
+       <h4>
+          <dl style="color: #FFFFFF; font-size: 14px;">
+            <dt style="color:#B23AEE;">Start searching by editing your profile.</dt>
+            <dd>Click "view/edit profile" in the navigation bar to fill out some basic information about yourself. We'll use the information to search up the best matches for you.</dd>
+              <br>
+            <dt style="color:#B23AEE;"> After pressing submit, click "matches" to check out your matches! </dt>
+            <dd> The matches page will list in order the best matches pertaining to info you filled out. Profiles with some basic info of the matches will be shown. To strike up a conversation with them, click on the message button on the side. </dd>
+          <br>
+            <dt style="color:#B23AEE;">Feel free to edit your profile anytime with updated information. </dt>
+            <dd> Feel free to update your profile anytime should information change. Simply resubmit the information, and we will create new possible matches. </dd>
+            <br>
+          <dt style="color:#B23AEE;"> Questions? Concerns? </dt>
+          <dd> Go to our about or FAQ pages to learn more about get some room. Shoot us a message if you have questions! </dd> 
+          </dl>
+        </h3>
+      </div> <!--welcome-->
       </div> <!-- /container -->
 
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->

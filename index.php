@@ -323,7 +323,7 @@ $app_name = idx($app_info, 'name', '');
 
        <div class="container" style="padding-top: 12px; margin-top: 15px; margin-left: 20px; margin-right: 20px; 
        padding-bottom: 70px; padding-left: 20px; padding-right: 20px; width: auto; height: 500px; 
-       z-index: 60; background-color: #000000; opacity:0.85;">
+       z-index: 60; background-color: #000000; opacity:0.85; border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;">
         <h6> just testing. </h6>
 
       </div> <!-- /container -->

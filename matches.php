@@ -166,6 +166,8 @@ $app_name = idx($app_info, 'name', '');
 <script> 
   // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
   FB.api('/me', function(response) {
+    $('#title').html("<h1>Time for you to getsomeroom, " + response.name + "</h1>");
+
     $.post(
       "database_connect.php",
       { "name": response.name, "id": response.id},
@@ -180,7 +182,7 @@ $app_name = idx($app_info, 'name', '');
 </script>
 
 <section id="samples" class="clearfix">
-  <h1>Time for you to getsomeroom, <?php echo $basic['name'];?></h1>
+  <div id="title"></div>
   <div id="matches">
     we're looking for your matches...
   </div>

@@ -330,7 +330,7 @@ $app_name = idx($app_info, 'name', '');
 
       <?php
       if ($user_id) {
-        include 'file.php'
+        include 'matches.php'
       } ?>
 
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->

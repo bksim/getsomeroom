@@ -20,10 +20,9 @@
   });
 </script>
 
-<section id="samples" class="clearfix">
+<div id="match-container" style="color:#FFFFFF;">
   <div id="title"></div>
   <div id="matches">
     we're looking for your matches...
   </div>
-
-</section>
+</div>

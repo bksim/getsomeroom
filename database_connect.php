@@ -13,7 +13,7 @@
 
     $sqlquery = "SELECT * FROM users WHERE fbid=" . $id;
     $result = pg_query($db, $sqlquery);
-    echo $result;
+    echo $result['fbid'] . $result['college'];
 
     //close connection
     pg_close($db);

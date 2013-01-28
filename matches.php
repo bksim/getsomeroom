@@ -3,9 +3,9 @@
 
 // Provides access to app specific values such as your app id and app secret.
 // Defined in 'AppInfo.php'
-require_once('AppInfo.php');
+require('AppInfo.php');
 // This provides access to helper functions defined in 'utils.php'
-require_once('utils.php');
+require('utils.php');
 
 // Enforce https on production
 if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
@@ -22,7 +22,7 @@ if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != 
  *
  ****************************************************************************/
 
-require_once('sdk/src/facebook.php');
+require('sdk/src/facebook.php');
 
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),

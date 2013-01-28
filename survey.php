@@ -100,7 +100,7 @@
 
  
 		<label class="checkbox" style="margin-left: 170px">
-	  		<input type="checkbox" name="checkBox1" value="t" checked>
+	  		<input type="checkbox" name="checkBox1" value="t">
 	  I enjoy cooking. 
 		</label>
 		<label class="checkbox" style="margin-left: 170px">
@@ -112,15 +112,15 @@
 	   I like to smoke. 
 		</label>
 		<label class="checkbox" style="margin-left: 170px">
-	  		<input type="checkbox" name="checkBox4" value="t" checked>
+	  		<input type="checkbox" name="checkBox4" value="t">
 	  I prefer a quiet roomate. 
 		</label>
 		<label class="checkbox" style="margin-left: 170px">
-	  		<input type="checkbox" name="checkBox5" value="t" checked>
+	  		<input type="checkbox" name="checkBox5" value="t">
 	  I am a night owl. 
 		</label>
 		<label class="checkbox" style="margin-left: 170px">
-	  		<input type="checkbox" name="checkBox6" value="t" checked>
+	  		<input type="checkbox" name="checkBox6" value="t">
 	  I am a morning bird. 
 		</label>
 		  <div class="control-group">

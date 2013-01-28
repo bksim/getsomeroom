@@ -22,6 +22,7 @@ BEGIN
         internjob = intern_job,
         moreinfo = more_info,
         checkitemcook = cook,
+        checkitemparty = party,
         checkitemsmoke = smoke,
         checkitemquiet = quiet,
         checkitemnightowl = night,
@@ -57,14 +58,14 @@ LANGUAGE plpgsql;
     $specificPartCity = $_POST['partCity']; 
     $genderPref = $_POST['inputGender']; 
     $foundHousing = $_POST['inputFound'];
-    $housingPref = $_POST['inputHousing']; //required
-    $company = $_POST['inputCompany']; // required
-    $internJob = $_POST['inputRole'];//required
-    $moreInfo = $_POST['moreinfo']; //required
-    $checkItemCook = $_POST['checkBox1']; // required
+    $housingPref = $_POST['inputHousing'];
+    $company = $_POST['inputCompany'];
+    $internJob = $_POST['inputRole'];
+    $moreInfo = $_POST['moreinfo'];
+    $checkItemCook = $_POST['checkBox1'];
     if (!isset($checkItemCook)) $checkItemCook = "f";
     
-    $checkItemParty = $_POST['checkBox2'];//required
+    $checkItemParty = $_POST['checkBox2'];
     if (!isset($checkItemParty)) $checkItemParty = "f";
 
     $checkItemSmoke = $_POST['checkBox3'];

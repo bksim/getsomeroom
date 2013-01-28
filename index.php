@@ -321,7 +321,7 @@ $app_name = idx($app_info, 'name', '');
     </div>
 
 
-      <div class="container" style="padding-top: 70px; padding-bottom: 70px; width: auto;">
+      <div class="container" style="padding-top: 70px; padding-bottom: 70px; width: auto; background: FFFFFF;">
 
       <h1>is this working?????</h1>
       <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>

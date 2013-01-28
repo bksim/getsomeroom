@@ -162,6 +162,14 @@ $app_name = idx($app_info, 'name', '');
   </div>
 </section>
 
+
+<script> // GET STUFF FROM FACEBOOK
+  FB.api('/me', function(response) {
+    console.log(response.id);
+    console.log(response.name);
+  });
+</script>
+
 <section id="samples" class="clearfix">
   <div id="matches">
     <!--grab info--><?php 
@@ -175,10 +183,11 @@ $app_name = idx($app_info, 'name', '');
     # Establish db connection
     $db = pg_connect(pg_connection_string());
 
-    echo $basic['name'];
 
-    $sqlquery = "lol";
+
+    //$sqlquery = "SELECT * FROM users WHERE ";
     //$result = pg_query($db, $sqlquery);
+    //echo $result;
 
     // close connection
     pg_close($db);

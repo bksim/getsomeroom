@@ -23,11 +23,11 @@
   });
 </script>
 
-<div id="match-container" style="color:#FFFFFF;">
+<div id="match-container" style="color:#FFFFFF; overflow-y:auto;">
   <div id="title"></div>
-  <div id="matches">
+  <div id="matches" style="padding-left:width: auto; height: 500px; overflow-y:auto;">
     we're looking for your matches...
-  <div id="matches" style="overflow-y:auto;">
+  <div id="matches">
     <img src="images/ajax_loader.gif" style="padding-left:50%;">
   </div>
 </div>

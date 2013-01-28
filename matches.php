@@ -1,5 +1,9 @@
 <?php
 
+
+// Provides access to app specific values such as your app id and app secret.
+// Defined in 'AppInfo.php'
+require_once('AppInfo.php');
 // This provides access to helper functions defined in 'utils.php'
 require_once('utils.php');
 

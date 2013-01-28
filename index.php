@@ -259,7 +259,7 @@ if ($user_id) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" rel="tab" href="matches.php">get some room</a>
+          <a class="brand" href="#">get some room</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="matches.php"rel="tab">matches</a></li>
@@ -289,7 +289,7 @@ if ($user_id) {
        <div class="container" id="main" style="padding-top: 12px; margin-bottom: 20px; margin-top: 15px; margin-left: 20px; margin-right: 20px; 
        padding-bottom: 70px; padding-left: 20px; padding-right: 20px; width: auto; height: 500px; 
        z-index: 60; background-color: #000000; opacity:0.85; border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;">
-        <h6> just testing. </h6>
+        <h6> INSTRUCTIONS GO HERE!! </h6>
 
       </div> <!-- /container -->
 

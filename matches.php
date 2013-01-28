@@ -161,3 +161,23 @@ $app_name = idx($app_info, 'name', '');
     </ul>
   </div>
 </section>
+
+<section id="samples" class="clearfix">
+  <div id="matches">
+    <!--grab info--><?php 
+
+    # This function reads your DATABASE_URL configuration automatically set by Heroku
+    # the return value is a string that will work with pg_connect
+    function pg_connection_string() {
+      return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
+    }
+
+    # Establish db connection
+    $db = pg_connect(pg_connection_string());
+
+    $sqlquery = "lol";
+    $result = pg_query($db, $sqlquery);
+
+    ?>
+  </div>
+</section>

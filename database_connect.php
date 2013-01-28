@@ -38,6 +38,8 @@
 
         //add college info
         $result_string .= ", " . $row['college'];
+
+        return $result_string;
     }
 
     # if user had filled out the profile and had put a city...

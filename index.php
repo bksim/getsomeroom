@@ -291,8 +291,8 @@ if ($user_id) {
        z-index: 60; background-color: #000000; opacity:0.85; border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;">
        <br>
        <div id = "welcome">
-       <h2 style="color:#FFFFFF; font-size: 24px; font-weight: bolder; "> Welcome to Get Some Room,  <?php echo $basic['name'];?>. </h2> 
-       <h3 style="font-size: 18px; color: #463E3F;"> Follow these steps to set up/edit your profile and find potential roommates matches no matter what city you'll be interning in.</h3>
+       <h2 style="color:#FFFFFF; font-size: 28px; font-weight: bolder; "> Welcome to Get Some Room,  <?php echo $basic['name'];?>. </h2> 
+       <h3 style="font-size: 22px; color: #463E3F;"> Follow these steps to set up/edit your profile and find potential roommates matches no matter what city you'll be interning in.</h3>
        <br>
        
        <h4>

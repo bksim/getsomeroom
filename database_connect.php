@@ -20,6 +20,25 @@
         $city = $row['cityintern'];
     }
     
+    # given a POSTGRESQL result row, prints a line in matches.php
+    # returns a string with HTML for one block in the matches results corresponding to that row
+    function print_match_result($row){
+        $fbid = $row['fbid'];
+        $fb_url = "https://www.facebook.com/" . $fbid;
+        $fb_profile_pic_url = "https://graph.facebook.com/" . $fbid . "/picture?type=square";
+
+        //clickable picture
+        $result_string = "<a href=" . $fb_url . "><img src=" . $fb_profile_pic_url . "></a>";
+
+        //spacing
+        $result_string .= "&nbsp;&nbsp;&nbsp;";
+
+        //add link to profile from name
+        $result_string .= "<a href=" . $fb_url . ">" . $row['firstname'] . " " . $row['lastname'] . "</a>";
+
+        //add college info
+        $result_string .= ", " . $row['college'];
+    }
 
     # if user had filled out the profile and had put a city...
     if (isset($city))
@@ -30,16 +49,7 @@
         $result_city = pg_query($db, $query_samecity);
         while ($row_samecity = pg_fetch_assoc($result_city))
         {
-            $fb_url = "https://www.facebook.com/" . $row_samecity['fbid'];
-            $fb_profile_pic_url = "https://graph.facebook.com/" . $row_samecity['fbid'] . "/picture?type=square";
-
-            //add clickable picture
-            $resultstring = $resultstring . "<a href=" . $fb_url . "><img src=" . $fb_profile_pic_url . "></a>";
-
-            $resultstring = $resultstring . "&nbsp;&nbsp;&nbsp;";
-            //add link to profile and info
-            $resultstring = $resultstring . "<a href=" . $fb_url . ">" . 
-            $row_samecity['firstname'] . " " . $row_samecity['lastname'] . "</a>" . ", " . $row_samecity['college'] . "<hr>";
+            $resultstring .= print_match_result($row_samecity);
         }
         echo $resultstring;
     }

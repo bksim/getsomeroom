@@ -171,7 +171,7 @@ $app_name = idx($app_info, 'name', '');
       function(data){
         console.log(data);
       }
-    });
+    );
   });
 </script>
 

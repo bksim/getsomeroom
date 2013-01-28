@@ -162,36 +162,27 @@ $app_name = idx($app_info, 'name', '');
   </div>
 </section>
 
-
-<script> // GET STUFF FROM FACEBOOK
+<script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+<script> 
+  // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
   FB.api('/me', function(response) {
-    console.log(response.id);
-    console.log(response.name);
+    //console.log(response.id);
+    //console.log(response.name);
   });
+
+  $.ajax({
+    url:'database_connect.php',
+    data: response.id + " " + response.name,
+    type: "POST",
+    success: function(data){
+      //do stuff with data returned
+      console.log(data);
+  }});
+
 </script>
 
 <section id="samples" class="clearfix">
   <div id="matches">
-    <!--grab info--><?php 
-
-    # This function reads your DATABASE_URL configuration automatically set by Heroku
-    # the return value is a string that will work with pg_connect
-    function pg_connection_string() {
-      return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
-    }
-
-    # Establish db connection
-    $db = pg_connect(pg_connection_string());
-
-
-
-    //$sqlquery = "SELECT * FROM users WHERE ";
-    //$result = pg_query($db, $sqlquery);
-    //echo $result;
-
-    // close connection
-    pg_close($db);
-
-    ?>
+    bla bla bla stuff here
   </div>
 </section>

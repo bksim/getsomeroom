@@ -297,6 +297,7 @@ if ($user_id) {
        
        <h4>
           <dl style="color: #FFFFFF; font-size: 14px;">
+            <?php echo("<br><a href='logout.php'>Click to log out</a>");?> 
             <dt style="color:#B23AEE;">Start searching by editing your profile.</dt>
             <dd>Click "view/edit profile" in the navigation bar to fill out some basic information about yourself. We'll use the information to search up the best matches for you.</dd>
               <br>

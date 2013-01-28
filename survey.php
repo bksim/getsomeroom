@@ -22,16 +22,18 @@
 	  <label class="control-label">Select the city you'll be interning in</label>
 	   <div class="controls">
 		<select name="formCity">
-  			<option value="NY">New York, NY</option>
-  			<option value="SF">San Francisco, CA</option>
-  			<option value="Paly">Palo Alto, CA</option>
-  			<option value="CBRIDGE">Cambridge, MA</option>
-  			<option value="BOS">Boston, MA</option>
-  			<option value="Philly">Philadelphia, PA</option>
-  			<option value="Chic">Chicago, IL</option>
-  			<option value="Shang">Shanghai, China</option>
-  			<option value="HK">Hong Kong, HK</option>
-  			<option value="other">Other</option>
+			<option value="BOS">Boston, MA</option>
+			<option value="CAM">Cambridge, MA</option>
+			<option value="CHI">Chicago, IL</option>
+			<option value="HK">Hong Kong, HK</option>
+			<option value="LON">London, UK</option>
+			<option value="NY">New York, NY</option>
+			<option value="PA">Palo Alto, CA</option>
+			<option value="PHI">Philadelphia, PA</option>
+			<option value="SF">San Francisco, CA</option>
+			<option value="SEA">Seattle, WA</option>
+			<option value="SHG">Shanghai, China</option>
+			<option value="other">Other</option>
 			</select>
 		</div>
 	</div>
@@ -43,13 +45,17 @@
 	    </div>
 	  </div>
 
-
-	  <div class="control-group">
-	    <label class="control-label" for="inputGender">gender roomate preference?</label>
-	    <div class="controls">
-	      <input type="text" name="inputGender" placeholder="female/male/I don't care">
-	    </div>
+	<div class="control-group">
+	  <label class="control-label">Gender preference?</label>
+	   <div class="controls">
+		<select name="inputGender">
+  			<option value="F">Female</option>
+  			<option value="M">Male</option>
+  			<option value="O">Don't care</option>
+		</select>
 		</div>
+	</div>
+
 		
 	<div class="control-group">
 	  <label class="control-label">Have you already found housing?</label>

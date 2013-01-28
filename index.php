@@ -321,17 +321,12 @@ $app_name = idx($app_info, 'name', '');
     </div>
 
 
-       <div class="container" style="padding-top: 12px; margin-bottom: 20px; margin-top: 15px; margin-left: 20px; margin-right: 20px; 
+       <div class="container" id="main" style="padding-top: 12px; margin-bottom: 20px; margin-top: 15px; margin-left: 20px; margin-right: 20px; 
        padding-bottom: 70px; padding-left: 20px; padding-right: 20px; width: auto; height: 500px; 
        z-index: 60; background-color: #000000; opacity:0.85; border-radius: 60px 60px 60px 60px / 60px 60px 60px 60px;">
         <h6> just testing. </h6>
 
       </div> <!-- /container -->
-
-      <?php
-      if ($user_id) {
-        include 'matches.php'
-      } ?>
 
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
@@ -369,7 +364,7 @@ $app_name = idx($app_info, 'name', '');
         }, {perms:'email'});
         return false;
     }
-</script>
+          </script>
               <!--<a href="#" onclick="oauth_login_url;"><img src="images/facebooklogin.jpg" border="0" alt=""></a> -->
           </div>
           <div class="addthis_toolbox addthis_default_style " style="margin:0 auto;margin-top:20px;width:155px;">
@@ -383,6 +378,6 @@ $app_name = idx($app_info, 'name', '');
         </div>
       </div>
     <?php } ?>
-
+</body>
   <?php include 'footer.php'?>
 </html>

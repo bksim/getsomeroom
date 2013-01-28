@@ -45,9 +45,8 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+        <div style="padding-left: 200px; padding-right: 200px; font-weight: 900; overflow-y:auto; padding-top: 20px; width: auto; height: 500px; color:#FFFFFF;">
 
-    <div class="container-narrow">
-      <div class="jumbotron">
         <h2>FAQ</h2>
         <p class="lead">What is the purpose of Get A Room?</p>
         <p class="answer"> To meet new people who can possibly be your roomates for the summer! </p>
@@ -97,5 +96,3 @@
         </table>
         </form>
       </div>
-
-    </div> <!-- /container -->

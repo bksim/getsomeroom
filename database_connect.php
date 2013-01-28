@@ -30,8 +30,8 @@
         $result_city = pg_query($db, $query_samecity);
         while ($row_samecity = pg_fetch_assoc($result_city))
         {
-            $resultstring = $resultstring . $row_samecity['firstname'] . " " . 
-            $row_samecity['lastname'] . " " . $row_samecity['college'] . "<hr>";
+            $resultstring = $resultstring . "<a href='https://www.facebook.com/" . $row_samecity['fbid'] . "'>" . 
+            $row_samecity['firstname'] . $row_samecity['lastname'] . "</a>" . ", " . $row_samecity['college'] . "<hr>";
         }
         echo $resultstring;
     }

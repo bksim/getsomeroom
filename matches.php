@@ -9,6 +9,10 @@
       function(data){
         if (data){
           //if data is not null
+          if (data === "<hr>")
+          {
+            data = "<hr>you have no matches :( #foreveralone";
+          }
           $('#matches').html(data);
         }
       }

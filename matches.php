@@ -3,15 +3,15 @@
 
 // Provides access to app specific values such as your app id and app secret.
 // Defined in 'AppInfo.php'
-require_once('AppInfo.php');
+require('AppInfo.php');
 // This provides access to helper functions defined in 'utils.php'
-require_once('utils.php');
+require('utils.php');
 
 // Enforce https on production
-if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
+/*if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != '127.0.0.1') {
   header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
   exit();
-}
+}*/
 
 /*****************************************************************************
  *
@@ -22,7 +22,7 @@ if (substr(AppInfo::getUrl(), 0, 8) != 'https://' && $_SERVER['REMOTE_ADDR'] != 
  *
  ****************************************************************************/
 
-require_once('sdk/src/facebook.php');
+require('sdk/src/facebook.php');
 
 $facebook = new Facebook(array(
   'appId'  => AppInfo::appID(),
@@ -162,22 +162,27 @@ $app_name = idx($app_info, 'name', '');
   </div>
 </section>
 
+
+<script> 
+  // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
+  FB.api('/me', function(response) {
+    $.post(
+      "database_connect.php",
+      { "name": response.name, "id": response.id},
+      function(data){
+        if (data){
+          //if data is not null
+          $('#matches').html(data);
+        }
+      }
+    );
+  });
+</script>
+
 <section id="samples" class="clearfix">
+  <h1>Time for you to getsomeroom, <?php echo $basic['name'];?></h1>
   <div id="matches">
-    <!--grab info--><?php 
-
-    # This function reads your DATABASE_URL configuration automatically set by Heroku
-    # the return value is a string that will work with pg_connect
-    function pg_connection_string() {
-      return "dbname=daanlenp3al7n5 host=ec2-54-243-230-216.compute-1.amazonaws.com port=5432 user=cjykxetwjrzkrk password=jQ-kNfCjoVqqGbZi0NeM7GzurA sslmode=require";
-    }
-
-    # Establish db connection
-    $db = pg_connect(pg_connection_string());
-
-    $sqlquery = "lol";
-    $result = pg_query($db, $sqlquery);
-
-    ?>
+    we're looking for your matches...
   </div>
+
 </section>

@@ -135,7 +135,7 @@ LANGUAGE plpgsql;
       die("Error in SQL query: " . pg_last_error());
     }*/
     // free memory
-    pg_free_result($result);
+    //pg_free_result($result);
 
     // close connection
     pg_close($db);

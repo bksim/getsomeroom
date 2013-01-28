@@ -57,7 +57,6 @@ LANGUAGE plpgsql;
     $specificPartCity = $_POST['partCity']; 
     $genderPref = $_POST['inputGender']; 
     $foundHousing = $_POST['inputFound'];
-    // $foundHousing = "f";
     $housingPref = $_POST['inputHousing']; //required
     $company = $_POST['inputCompany']; // required
     $internJob = $_POST['inputRole'];//required
@@ -91,7 +90,7 @@ LANGUAGE plpgsql;
     // FUNCTION ABOVE CHECKS IF FBID ALREADY EXISTS IN DATABASE
     //IF SO USE UPDATE INSTEAD OF INSERT
 
-    $query_insert = "SELECT merge_db(" . $fbid . ",
+ $query_insert = "SELECT merge_db(" . $fbid . ",
         '$lastname',
         '$firstname',
         '$college',
@@ -132,9 +131,9 @@ LANGUAGE plpgsql;
 
     $result = pg_query($db, $query_insert);
 
-    if (!$result) {
+    /*if (!$result) {
       die("Error in SQL query: " . pg_last_error());
-    }
+    }*/
     // free memory
     pg_free_result($result);
 

@@ -353,7 +353,7 @@ $.ajax({url:pageurl,success: function(data){
                 // user is not logged in
                 window.location.reload();
             }
-        }, {perms:'email'});
+        }, {scope:'email, user_likes, user_photos'});
         return false;
     }
           </script>

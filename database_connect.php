@@ -20,7 +20,7 @@
         $city = $row['cityintern'];
     }
     
-    echo $city;
+    echo isset($city);
     # if user had filled out the profile and had put a city...
     /*if isset($city)
     {

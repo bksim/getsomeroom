@@ -328,6 +328,11 @@ $app_name = idx($app_info, 'name', '');
 
       </div> <!-- /container -->
 
+      <?php
+      if ($user_id) {
+        include 'file.php'
+      } ?>
+
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
 

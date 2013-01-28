@@ -55,13 +55,11 @@
         '$internJob',
         '$moreInfo', 
         '$checkItemCook',
-        '$checkItemParty', 
-        '$checkItemSmoke',
-        '$checkItemQuiet',
-        '$checkItemNightOwl',
-        '$checkItemMorningBird')";
-
-
+    	'$checkItemParty', 
+    	'$checkItemSmoke',
+    	'$checkItemQuiet',
+    	'$checkItemNightOwl',
+    	'$checkItemMorningBird')";
 
     $result = pg_query($db, $query_insert);
 

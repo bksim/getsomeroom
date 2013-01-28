@@ -175,8 +175,13 @@ $app_name = idx($app_info, 'name', '');
     # Establish db connection
     $db = pg_connect(pg_connection_string());
 
+    echo $basic['name'];
+
     $sqlquery = "lol";
-    $result = pg_query($db, $sqlquery);
+    //$result = pg_query($db, $sqlquery);
+
+    // close connection
+    pg_close($db);
 
     ?>
   </div>

@@ -65,7 +65,7 @@
          
         <!-- Modal -->
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <form name="contactform" method="post" action="contact.php">
+          <form method="POST" action="contact.php">
           <div class="modal-body">
           <table width="450px">
             <tr>
@@ -99,10 +99,10 @@
     </tr>
         </table>
           </div>
-          <form name="contactform" method="post" action="contact.php">
           <div class="modal-footer">
-            <button class="btn" input-type="submit" data-dismiss="modal" aria-hidden="true">Submit</button>
+            <button class="btn" type="submit" data-dismiss="modal" aria-hidden="true">Submit</button>
           </div>
+        </form>
         </div>
 
         

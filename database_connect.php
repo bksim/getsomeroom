@@ -38,10 +38,12 @@
         $result_string .= "<a href=" . $fb_url . ">" . $row['firstname'] . " " . $row['lastname'] . "</a>";
 
         //add college info
-        $result_string .= "<img src='images/college-trans.gif style='height:15px;padding-left:20px;padding-right:15px;'>" . $row['college'];
+        $result_string .= "<img src='images/college-trans.gif' style='height:15px;padding-left:20px;padding-right:5px;'>" . $row['college'];
 
+        //part of city
+        $result_string .= "<img src='images/location.gif' style='height:15px;padding-left:20px;padding-right:5px;'>" . $row['specificpartcity'];
+        
         //add message button
-
         $result_string .= "<a href='https://www.facebook.com/dialog/send?to=" . $fbid . "&app_id=195569513923216&name=getsomeroom&link=https://getsomeroom.herokuapp.com&redirect_uri=https://getsomeroom.herokuapp.com'><img src='images/sendmessage.gif' align='right' style='height:35px;padding-right:30px;'></a>";
 
         return $result_string;

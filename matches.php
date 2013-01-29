@@ -22,7 +22,7 @@
 
 <div id="match-container" style="color:#FFFFFF;">
   <div id="title"></div>
-  <div id="matches" style="width: auto; height: 500px; overflow-y:auto;">
+  <div id="matches" style="width: auto; height: 500px; overflow-y:auto; font-size:16px;">
     we're looking for your matches...
   <div id="matches">
     <img src="images/ajax_loader.gif" style="padding-left:50%;">

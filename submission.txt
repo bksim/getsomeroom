@@ -1,0 +1,22 @@
+Getsomeroom (https://getsomeroom.herokuapp.com/)
+Link to website: https://getsomeroom.herokuapp.com/
+Team members: Ava Chang, Brandon Sim
+Division: Rookie
+
+1) Briefly list the core technologies that you ended up using to build your site (for example, Ruby on Rails, Node.js).
+We used a PHP backend with a PostgreSQL database. This is uploaded onto herokuapp on their cedar stack. The frontend is mostly Javascript-driven.
+
+
+2) Please list all 3rd party libraries that are used in your website. This includes all code, apart from core technologies, that powers your website but was not written by your team. (including Twitter Bootstrap, jQuery, Pusher API) If in doubt, please include it. For each 3rd party library, please explain how you use it in your website.
+
+Twitter Bootstrap was used for the navigation bar, dropdown menus, and forms. 
+
+jQuery was used for most, if not all, AJAX calls to retrieve information from databases and to update divs with information upon user actions. The entire site is AJAX-loaded; that is, we use jQuery to dynamically load content when the user navigates through the website without refreshing the page, which we hope provides for a better UX. 
+
+Cycle.js was used to fade the background images in and out; it calculates the opacity necessary and takes care of timing issues by using javascript to change the z-indices of the various images at appropriate times. 
+
+The Facebook Javascript and PHP SDK's were also used (mostly the javascript sdk) to obtain data from the Facebook Graph API.
+
+
+3) Please specify (for our convenience) which browser your site was developed for.
+The site is best viewed in Chrome (with appropriate zoom settings).

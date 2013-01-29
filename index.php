@@ -259,7 +259,7 @@ $.ajax({url:pageurl,success: function(data){
     
     <table width="200" border="0" align="center" cellpadding="0" cellspacing="1">
       <tr>
-      <td><form class ="navbar-form pull-left"name="form1" method="post" action="contact.php">
+      <td><form id="modal-form" class ="navbar-form pull-left"name="form1" method="post" action="contact.php">
       <table width="100%" border="0" cellspacing="1" cellpadding="3">
         <tr>
         <td width="16%">Subject      </td>
@@ -294,9 +294,20 @@ $.ajax({url:pageurl,success: function(data){
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button id="modal-form-submit" class="btn btn-primary">Submit</button>
   </div>
 </div>
+
+<script>
+  $('#modal-form-submit').on('click', function(e){
+    // We don't want this to act as a link so cancel the link action
+    e.preventDefault();
+
+    // Find form and submit it
+    $('#modal-form').submit();
+  });
+</script>
+
 
 
     <header class="clearfix">

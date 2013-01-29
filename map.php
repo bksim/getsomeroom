@@ -5,7 +5,6 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false"
   type="text/javascript"></script>
-    </script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -20,4 +19,3 @@
   <div id="map_container" onload="initialize()">
     <div id="map_canvas" style="width:100%; height:100%"></div>
   </div>
-</html>

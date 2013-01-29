@@ -13,6 +13,8 @@ $name = $_POST['name'];
 // From 
 $header="from: '$name' <'$mail_from'>";
 
+echo $header;
+
 // Enter your email address
 $to ='bsim@college.harvard.edu';
 $send_contact=mail($to,$subject,$message,$header);

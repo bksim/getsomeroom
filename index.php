@@ -284,7 +284,6 @@ $.ajax({url:pageurl,success: function(data){
         <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td><input type="submit" name="Submit" value="Submit"> <input type="reset" name="Submit2" value="Reset"></td>
         </tr>
       </table>
       </form>
@@ -295,7 +294,7 @@ $.ajax({url:pageurl,success: function(data){
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-    <button class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary" >Submit</button>
   </div>
 </div>
 

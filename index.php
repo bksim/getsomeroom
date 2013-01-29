@@ -49,6 +49,7 @@ if ($user_id) {
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
   <head>
+    <title> getsomeroom </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 
@@ -82,6 +83,7 @@ if ($user_id) {
     <meta property="og:site_name" content="<?php echo he($app_name); ?>" />
     <meta property="og:description" content="My first app" />
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
+    <link rel="shortcut icon" href="images/favicon.ico" >
 
     <script type="text/javascript" src="javascript/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="javascript/jquery.cycle.all.js"></script> 

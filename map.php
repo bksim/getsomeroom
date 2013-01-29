@@ -64,6 +64,7 @@
 
       //adds markers
       function addMarker() {
+        console.log(neighborhoods[iterator]);
       markers.push(new google.maps.Marker({
         position: neighborhoods[iterator],
         map: map,

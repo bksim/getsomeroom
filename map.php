@@ -14,10 +14,10 @@
       var geocoder = new google.maps.Geocoder();
 
       var neighborhoods = [
-        new google.maps.LatLng(geocodecity("Boston")),
-        new google.maps.LatLng(geocodecity("San Francisco")),
-        new google.maps.LatLng(geocodecity("Palo Alto")),
-        new google.maps.LatLng(geocodecity("Chicago"))
+        geocodecity("Boston"),
+        geocodecity("San Francisco"),
+        geocodecity("Palo Alto"),
+        geocodecity("Chicago")
       ];
       var markers = [];
       var iterator = 0;
@@ -78,7 +78,7 @@
         var geocoder1 = new google.maps.Geocoder();
         geocoder1.geocode( { 'address': city}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
-            console.log(results[0].geometry.location)
+            //console.log(results[0].geometry.location)
             return results[0].geometry.location;
           } else {
             return "error";

@@ -65,15 +65,3 @@
 
 <!-- Button to trigger modal -->
 <a href="#myModal" role="button" class="btn" data-toggle="modal">Have a question?</a>
- 
-
-
-<!--
-
-<table width="200" border="0" align="center" cellpadding="3" cellspacing="1">
-  <tr>
-    <td><strong>Contact Form </strong></td>
-  </tr>
-</table>-->
-
-

@@ -38,7 +38,7 @@
         $result_string .= "<a href=" . $fb_url . ">" . $row['firstname'] . " " . $row['lastname'] . "</a>";
 
         //add college info
-        $result_string .= ", " . $row['college'];
+        $result_string .= "<img src='images/college-trans.gif style='height:15px;padding-left:20px;padding-right:15px;'>" . $row['college'];
 
         //add message button
 

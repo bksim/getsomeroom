@@ -19,6 +19,8 @@
         geocodecity("Palo Alto"),
         geocodecity("Chicago")
       ];
+
+      console.log(neighborhoods[0]);
       var markers = [];
       var iterator = 0;
       var map;

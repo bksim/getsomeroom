@@ -1,4 +1,6 @@
-<script>FB.api('/me', function(response) {
+<script>
+$('#main').css({opacity:0.85});
+FB.api('/me', function(response) {
   document.getElementById("fbid").value=response.id;
   var temp = response.name.split(" ");
   document.getElementById("lastname").value=temp[1];

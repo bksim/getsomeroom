@@ -1,4 +1,5 @@
 <script> 
+$('#main').css({opacity:0.85});
   // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
   FB.api('/me', function(response) {
     $('#title').html("<h1>Time for you to getsomeroom, " + response.name + "</h1>");

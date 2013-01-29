@@ -1,4 +1,4 @@
- <!-- Le styles -->
+<script>$('#main').css({opacity:0.85});</script> <!-- Le styles -->
 <style type="text/css">
 
   /* Custom container */

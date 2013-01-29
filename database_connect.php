@@ -41,9 +41,8 @@
         $result_string .= ", " . $row['college'];
 
         //add message button
-        $result_string .= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
-        $result_string .= "<a href='https://www.facebook.com/dialog/send?to=" . $fbid . "&app_id=195569513923216&name=getsomeroom&link=https://getsomeroom.herokuapp.com&redirect_uri=https://getsomeroom.herokuapp.com'><img src='images/sendmessage.png'></a>";
+        $result_string .= "<a href='https://www.facebook.com/dialog/send?to=" . $fbid . "&app_id=195569513923216&name=getsomeroom&link=https://getsomeroom.herokuapp.com&redirect_uri=https://getsomeroom.herokuapp.com'><img src='images/sendmessage.gif' align='right' style='height:35px;padding-right:30px;'></a>";
 
         return $result_string;
     }

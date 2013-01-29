@@ -5,8 +5,9 @@
     </style>
 
     <!-- MAPS FEATURE -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false" type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false" type="text/javascript"></script>-->
 
     <script type="text/javascript">
       function initialize() {

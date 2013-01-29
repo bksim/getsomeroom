@@ -70,15 +70,7 @@
             <h3 id="myModalLabel">Modal header</h3>
           </div>
           <div class="modal-body">
-            <p>One fine body…</p>
-          </div>
-          <div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            <button class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-
-        <form name="contactform" method="post" action="contact.php">
+            <form name="contactform" method="post" action="contact.php">
           <table width="450px">
             <tr>
           <td valign="top">
@@ -109,7 +101,13 @@
     <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
   </td>
     </tr>
-    <input type="submit" value="Submit">
         </table>
         </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" input-type="submit" data-dismiss="modal" aria-hidden="true">Submit</button>
+          </div>
+        </div>
+
+        
       </div>

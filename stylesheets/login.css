@@ -94,7 +94,7 @@ body{
 	background: url(../images/boxtile.png) repeat;
 	border: 1px solid rgba(90, 90, 90, 0.7);
 	/*position: relative;*/
-	margin: 0 auto 40px auto;
+	margin: 0 300px;
 	/*width: 500px;*/
 	/*height: auto;*/
 	min-height: 330px;

@@ -10,13 +10,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false" type="text/javascript"></script>-->
 
     <script type="text/javascript">
+      $('#container').css({opacity:1.0}); //makes map easier to read
       var geocoder;
       function initialize() {
         console.log("maps initialized."); 
 
         var mapOptions = {
           center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 6,
+          zoom: 4,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
@@ -27,7 +28,7 @@
         geocoder.geocode( { 'address': 'United States of America'}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
             map.setCenter(results[0].geometry.location);
-            map.setZoom(6);
+            map.setZoom(4);
             /*var marker = new google.maps.Marker({
                 map: map,
                 position: results[0].geometry.location
@@ -43,6 +44,6 @@
       });
     </script>
 
-  <div id="map_container">
+  <div id="map_container" style="opacity:">
     <div id="map_canvas" style="width:100%; height:100%"></div>
   </div>

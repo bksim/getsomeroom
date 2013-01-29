@@ -14,14 +14,14 @@
       }
 
       .lead{
-        font-size: 16px;
-        font-style: bold;
+        font-size: 17px;
+        font-style: bolder;
         text-align: left;
+        color:#B23AEE;
       }
 
       .answer{
-      	font-size: 14px;
-        font-style:italic;
+      	font-size: 15px;
         text-align: left;
       }
 
@@ -48,7 +48,7 @@
         <div style="padding-left: 200px; padding-right: 200px; font-weight: 900; overflow-y:auto; padding-top: 20px; width: auto; height: 500px; color:#FFFFFF;">
 
         <h2>FAQ</h2>
-        <p class="lead">What is the purpose of getsomeroom?</p>
+        <p class="lead" >What is the purpose of getsomeroom?</p>
         <p class="answer"> To meet new people who can possibly be your roommates for the summer! We find you matches based on the city you're working in as well as other things you tell us in the survey.</p>
         
         <p class="lead">What types of features are considered when matching roommates?</p>

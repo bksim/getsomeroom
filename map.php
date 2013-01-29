@@ -10,6 +10,42 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false" type="text/javascript"></script>-->
 
     <script type="text/javascript">
+      /* FUNCTIONS */
+      //drop pins
+      function drop() {
+        for (var i =0; i < neighborhoods.length; i++) {
+          setTimeout(function() {
+            addMarker();
+          }, i * 200);
+        }
+      }
+
+      //adds markers
+      function addMarker() {
+        console.log(neighborhoods[iterator]);
+      markers.push(new google.maps.Marker({
+        position: neighborhoods[iterator],
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.DROP
+        }));
+      iterator++;
+      }
+
+      //returns latlongs for city names
+      function geocodecity(city) {
+        var geocoder1 = new google.maps.Geocoder();
+        geocoder1.geocode( { 'address': city}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            //console.log(results[0].geometry.location)
+            return results[0].geometry.location;
+          } else {
+            return "error";
+          }
+        });
+      }
+
+      /* MAIN CODE */
       $('#main').css({opacity:1.0}); //makes map easier to read
       var geocoder = new google.maps.Geocoder();
 
@@ -55,39 +91,6 @@
         drop();
       }
 
-      //drop pins
-      function drop() {
-        for (var i =0; i < neighborhoods.length; i++) {
-          setTimeout(function() {
-            addMarker();
-          }, i * 200);
-        }
-      }
-
-      //adds markers
-      function addMarker() {
-        console.log(neighborhoods[iterator]);
-      markers.push(new google.maps.Marker({
-        position: neighborhoods[iterator],
-        map: map,
-        draggable: false,
-        animation: google.maps.Animation.DROP
-        }));
-      iterator++;
-      }
-
-      //returns latlongs for city names
-      function geocodecity(city) {
-        var geocoder1 = new google.maps.Geocoder();
-        geocoder1.geocode( { 'address': city}, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            //console.log(results[0].geometry.location)
-            return results[0].geometry.location;
-          } else {
-            return "error";
-          }
-        });
-      }
 
       $(document).ready(function() {
         initialize();

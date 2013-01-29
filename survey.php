@@ -103,7 +103,7 @@
  
     <label class="checkbox" style="margin-left: 170px">
         <input type="checkbox" name="checkBox1" value="t">
-    I enjoy cooking. 
+    I will cook for whoever lives with me. 
     </label>
     <label class="checkbox" style="margin-left: 170px">
         <input type="checkbox" name="checkBox2" value="t">
@@ -119,11 +119,11 @@
     </label>
     <label class="checkbox" style="margin-left: 170px">
         <input type="checkbox" name="checkBox5" value="t">
-    I am a night owl. 
+    I sleep super late. 
     </label>
     <label class="checkbox" style="margin-left: 170px">
         <input type="checkbox" name="checkBox6" value="t">
-    I am a morning bird. 
+    I wake up super early. 
     </label>
       <div class="control-group">
         <div class="controls">

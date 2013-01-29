@@ -61,49 +61,43 @@
         <p class="lead">How can I ensure this site is safe?</p>
         <p class="answer"> Our site uses the HTTPS protocol, which take advantage of SSL, a cryptographic protocol that provides security. We do not include your internship activity or company in the profile we display to other users. </p>
         
-        <a href="#myModal" role="button" class="btn" data-toggle="modal">Questions?</a>
-         
-        <!-- Modal -->
+        <br>
+
+        <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <form method="POST" action="contact.php">
-          <div class="modal-body">
-          <table width="450px">
-            <tr>
-          <td valign="top">
-          <label for="first_name">First Name</label>
-            </td>
-            <td valign="top">
-          <input  type="text" name="first_name" maxlength="50" size="30">
-          </td>
-        </tr>
-        <tr>
-        <td valign="top">
-        <label for="last_name">Last Name</label>
-        </td>
-        <td valign="top">
-        <input  type="text" name="last_name" maxlength="50" size="30">
-        </td>
-        </tr>
-        <tr>
-        <td valign="top">
-          <label for="email">Email Address</label>
-        </td>
-        </tr>
-        <tr>
-    <td valign="top">
-    <label for="comments">Comments *</label>
-  </td>
-  <td valign="top">
-    <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-  </td>
-    </tr>
-        </table>
-          </div>
-          <div class="modal-footer">
-            <button class="btn" type="submit" data-dismiss="modal" aria-hidden="true">Submit</button>
-          </div>
+
+          <!-- <div class="modal-body">
+        </div> -->
+        <form method="post" action="contact.php">
+        Email: <input name="email" type="text"><br>
+        Message:<br>
+        <textarea name="message" rows="15" cols="40"></textarea><br>
+        <input type="submit">
+
+        <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  </form>
+</div>
+
+        <form method="post" action="contact.php">
+        Email: <input name="email" type="text"><br>
+        Message:<br>
+        <textarea name="message" rows="15" cols="40"></textarea><br>
+        <input type="submit">
         </form>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
 
         
       </div>

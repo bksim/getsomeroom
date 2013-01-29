@@ -294,7 +294,7 @@ $.ajax({url:pageurl,success: function(data){
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-    <button class="btn btn-primary" >Submit</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
   </div>
 </div>
 

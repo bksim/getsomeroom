@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
       #map_canvas { height: 100% }
+      #map_container {height: 100%;}
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false"
   type="text/javascript"></script>
@@ -21,8 +17,7 @@
             mapOptions);
       }
     </script>
-  </head>
-  <body onload="initialize()">
+  <div id="map_container" onload="initialize()">
     <div id="map_canvas" style="width:100%; height:100%"></div>
-  </body>
+  </div>
 </html>

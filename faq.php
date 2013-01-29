@@ -109,6 +109,7 @@
     <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
   </td>
     </tr>
+    <input type="submit" value="Submit">
         </table>
         </form>
       </div>

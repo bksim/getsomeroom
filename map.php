@@ -7,6 +7,7 @@
   type="text/javascript"></script>
     <script type="text/javascript">
       function initialize() {
+        console.log("IM HERE");
         var mapOptions = {
           center: new google.maps.LatLng(-34.397, 150.644),
           zoom: 8,

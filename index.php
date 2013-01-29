@@ -83,7 +83,7 @@ if ($user_id) {
     <meta property="og:description" content="My first app" />
     <meta property="fb:app_id" content="<?php echo AppInfo::appID(); ?>" />
 
-    <script type="text/javascript" src="javascript/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="javascript/jquery.cycle.all.js"></script> 
     <script src="javascript/bootstrap.min.js"></script>
 

@@ -15,9 +15,9 @@
   }
 
 </style>
-  <div style="padding-left: 200px; padding-right: 200px; padding-top: 100px; padding-bottom: 60px; font-weight: 900; overflow-y:auto; width: auto; height: 500px; color:#FFFFFF;">
-    <p class="lead"> This site was created for the 6.470(Web Programming Design Class) at MIT during the IAP 2013 period. A
-      fter spending countless hours finding an internship/job for the winter or summer, we often spend even more countless hours 
+  <div style="padding-left: 200px; padding-right: 200px; padding-top: 120px; padding-bottom: 60px; font-weight: 900; overflow-y:auto; width: auto; height: 500px; color:#FFFFFF;">
+    <p class="lead"> This site was created for the 6.470 (Web Programming Design Class) at MIT during the IAP 2013 period. After spending 
+      countless hours finding an internship/job for the winter or summer, we often spend even more countless hours 
       figuring out where we will live and who we will room with. Finding housing is difficult, but finding roommates is even more 
       difficult. This site facilitates roommmate-finding by asking each user where they will intern, which gender they prefer 
       to room with, and what college they attend, among other questions. Users are then matched with other users on the site depending

@@ -14,10 +14,10 @@
       var geocoder = new google.maps.Geocoder();
 
       var neighborhoods = [
-        new google.maps.LatLng(42.3583, -71.0603),
-        new google.maps.LatLng(52.549061, -73),
-        new google.maps.LatLng(52.497622, -75),
-        new google.maps.LatLng(52.517683, -69)
+        new google.maps.LatLng(geocodecity("Boston")),
+        new google.maps.LatLng(geocodecity("San Francisco")),
+        new google.maps.LatLng(geocodecity("Palo Alto")),
+        new google.maps.LatLng(geocodecity("Chicago"))
       ];
       var markers = [];
       var iterator = 0;
@@ -71,6 +71,18 @@
         animation: google.maps.Animation.DROP
         }));
       iterator++;
+      }
+
+      //returns latlongs for city names
+      function geocodecity(city) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode( { 'address': city}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            return results[0].geometry.location;
+          } else {
+            return "error";
+          }
+        });
       }
 
       $(document).ready(function() {

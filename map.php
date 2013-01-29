@@ -17,7 +17,7 @@
         new google.maps.LatLng(42.3583, 71.0603),
         new google.maps.LatLng(52.549061, 73),
         new google.maps.LatLng(52.497622, 75),
-        new google.maps.LatLng(52.517683, 3)
+        new google.maps.LatLng(52.517683, 69)
       ];
       var markers = [];
       var iterator = 0;
@@ -49,6 +49,8 @@
             alert("Geocode was not successful for the following reason: " + status);
           }
         });
+
+        drop();
       }
 
       //drop pins

@@ -38,10 +38,10 @@
         $result_string .= "<a href=" . $fb_url . ">" . $row['firstname'] . " " . $row['lastname'] . "</a>";
 
         //add college info
-        $result_string .= "<img src='images/college-trans.gif' style='height:15px;padding-left:20px;padding-right:5px;'>" . $row['college'];
+        $result_string .= "<img src='images/college_trans.gif' style='height:15px;padding-left:20px;padding-right:5px;'>" . $row['college'];
 
         //part of city
-        $result_string .= "<img src='images/location.gif' style='height:20px;padding-left:20px;padding-right:5px;'>" . $row['specificpartcity'];
+        $result_string .= "<img src='images/location_trans.gif' style='height:20px;padding-left:20px;padding-right:5px;'>" . $row['specificpartcity'];
 
         //type of housing
         $result_string .= "<img src='images/house_trans.gif' style='height:15px; padding-left:20px;padding-right:5px;'>" . $row['housingpref'];

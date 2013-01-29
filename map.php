@@ -32,29 +32,34 @@
       iterator++;
       }
 
-      //returns latlongs for city names
-      function geocodecity(city) {
-        var geocoder1 = new google.maps.Geocoder();
-        geocoder1.geocode( { 'address': city}, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            console.log("here");
-            console.log(results[0].geometry.location);
-            return results[0].geometry.location;
-          } else {
-            return "error";
-          }
-        });
-      }
-
       /* MAIN CODE */
       $('#main').css({opacity:1.0}); //makes map easier to read
       var geocoder = new google.maps.Geocoder();
 
+
+      // retrieve location data
+      var neighborhoods = [];
+
+      $.post(
+        "get_city_data.php",
+        function(data){
+          if (data){
+            //if data is not null
+            for (var key in data)
+              {
+                console.log(data[key]);
+                //neighborhoods.push()
+              }    
+            // do stuff here
+          }
+        }
+      );
+
       var neighborhoods = [
-        geocodecity("Boston"),
-        geocodecity("San Francisco"),
-        geocodecity("Palo Alto"),
-        geocodecity("Chicago")
+        new google.maps.LatLng(52.511467, 13.447179),
+        new google.maps.LatLng(52.511467, 13.447179),
+        new google.maps.LatLng(52.511467, 13.447179),
+        new google.maps.LatLng(52.511467, 13.447179)
       ];
 
       console.log(geocodecity("Boston"));

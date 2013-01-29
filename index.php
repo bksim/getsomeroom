@@ -336,7 +336,7 @@ $.ajax({url:pageurl,success: function(data){
             <ul class="nav">
               <li><a href="matches.php"rel="tab">matches</a></li>
               <li><a href="survey.php" rel="tab">edit profile</a></li>
-              <li><a href="map.php" rel="tab">map</a></li>
+              <!--<li><a href="map.php" rel="tab">map</a></li>-->
               <li><a href="about.php" rel="tab">about</a></li>
               <li><a href="faq.php" rel="tab">faq</a></li>
             </ul>

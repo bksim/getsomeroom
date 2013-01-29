@@ -60,7 +60,52 @@
             $query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . " ORDER BY genderpref DESC;";
         }
 
-        $resultstring = "Displaying all users interning in same city in order of compatibility: <hr>";
+        # match cities to names
+        switch ($city) {
+        case "BOS":
+            $cityname = "Boston";
+            break;
+        case "CAM":
+            $cityname = "Cambridge, MA";
+            break;
+        case "CHI":
+            $cityname = "Chicago";
+            break;
+        case "HK":
+            $cityname = "Hong Kong";
+            break;
+        case "LON":
+            $cityname = "London";
+            break;
+        case "LA":
+            $cityname = "Los Angeles";
+            break;
+        case "NY":
+            $cityname = "New York";
+            break;
+        case "PA":
+            $cityname = "Palo Alto";
+            break;
+        case "PHI":
+            $cityname = "Philadelphia";
+            break;
+        case "SF":
+            $cityname = "San Francisco";
+            break;
+        case "SEA":
+            $cityname = "Seattle";
+            break;
+        case "SHG":
+            $cityname = "Shanghai";
+            break;
+        case "other":
+            $cityname = "your city";
+            break;
+        default:
+            $cityname = "your city";
+        }
+
+        $resultstring = "Displaying all users interning in " . $cityname . " in order of compatibility: <hr>";
         # gets everyone who put the same city except the user him/herself
         //$query_samecity = "SELECT * FROM users WHERE cityintern = '$city' AND fbid <> " . $id . ";";
         $result_city = pg_query($db, $query_samecity);

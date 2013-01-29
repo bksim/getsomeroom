@@ -70,7 +70,7 @@
 </table>
 <table width="200" border="0" align="center" cellpadding="0" cellspacing="1">
 <tr>
-<td><form name="form1" method="post" action="contact.php">
+<td><form class ="navbar-form pull-left"name="form1" method="post" action="contact.php">
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
 <tr>
 <td width="16%">Subject</td>

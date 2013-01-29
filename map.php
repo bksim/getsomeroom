@@ -10,7 +10,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFtZJbKg9iT-Bg4zMFR-s0uJSuPwj5BVc&sensor=false" type="text/javascript"></script>-->
 
     <script type="text/javascript">
-      $('#container').css({opacity:1.0}); //makes map easier to read
+      $('#main').css({opacity:1.0}); //makes map easier to read
       var geocoder;
       function initialize() {
         console.log("maps initialized."); 

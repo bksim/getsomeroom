@@ -267,7 +267,7 @@ $.ajax({url:pageurl,success: function(data){
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="matches.php"rel="tab">matches</a></li>
-              <li><a href="survey.php" rel="tab">view/edit profile</a></li>
+              <li><a href="survey.php" rel="tab">edit profile</a></li>
               <li><a href="about.php" rel="tab">about</a></li>
               <li><a href="faq.php" rel="tab">faq</a></li>
             </ul>
@@ -302,7 +302,7 @@ $.ajax({url:pageurl,success: function(data){
        <h4>
           <dl style="color: #FFFFFF; font-size: 14px;"> 
             <dt style="color:#B23AEE;">Start searching by editing your profile.</dt>
-            <dd>Click "view/edit profile" in the navigation bar to fill out some basic information about yourself. We'll use the information to search up the best matches for you.</dd>
+            <dd>Click "edit profile" in the navigation bar to fill out some basic information about yourself. We'll use the information to search up the best matches for you.</dd>
               <br>
             <dt style="color:#B23AEE;"> After pressing submit, click "matches" to check out your matches! </dt>
             <dd> The matches page will list in order the best matches pertaining to info you filled out. Profiles with some basic info of the matches will be shown. To strike up a conversation with them, click on the message button on the side. </dd>

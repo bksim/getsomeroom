@@ -267,19 +267,16 @@ $.ajax({url:pageurl,success: function(data){
         <td width="2%">:</td>
         <td width="82%"><input name="subject" type="text" id="subject" size="50"></td>
         </tr>
-        <br/>
         <tr>
         <td>Detail      </td>
         <td>:</td>
         <td><textarea name="detail" cols="50" rows="4" id="detail"></textarea></td>
         </tr>
-        <br/>
         <tr>
         <td>Name     </td>
         <td>:</td>
         <td><input name="name" type="text" id="name" size="50"></td>
         </tr>
-        <br/>
         <tr>
         <td>Email     </td>
         <td>:</td>
@@ -299,7 +296,7 @@ $.ajax({url:pageurl,success: function(data){
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-    <button class="btn btn-primary">Submit</button>-->
+    <button class="btn btn-primary">Submit</button>
   </div>
 </div>
 

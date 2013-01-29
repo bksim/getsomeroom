@@ -67,7 +67,8 @@
 <a href="#myModal" role="button" class="btn" data-toggle="modal">Have a question?</a>
  
 <!-- Modal -->
-<div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<script src="javascript/bootstrap-modal.js"></script>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel">Ask us a question!</h3>

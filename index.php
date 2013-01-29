@@ -280,7 +280,6 @@ $.ajax({url:pageurl,success: function(data){
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $basic['name'];?><b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="survey.php" rel="tab">Profile</a></li>
-                  <li><a href="logout.php" rel="tab">Logout</a></li>
                 </ul>
               </li>
             </ul>
@@ -296,7 +295,7 @@ $.ajax({url:pageurl,success: function(data){
        <br>
        <div id = "welcome">
        <h2 style="color:#FFFFFF; font-size: 28px; font-weight: bolder; "> Welcome to Get Some Room,  <?php echo $basic['name'];?>. </h2> 
-       <h3 style="font-size: 22px; color: #463E3F;"> Follow these steps to set up/edit your profile and find potential roommates matches no matter what city you'll be interning in.</h3>
+       <h3 style="font-size: 22px; color: #463E3F;"> Follow these steps to find potential roommates and friends in the city you'll be interning!</h3>
        <br>
        
        <h4>

@@ -43,6 +43,12 @@
         //part of city
         $result_string .= "<img src='images/location.gif' style='height:20px;padding-left:20px;padding-right:5px;'>" . $row['specificpartcity'];
 
+        //type of housing
+        $result_string .= "<img src='images/house_trans.gif' style='height:15px; padding-left:20px;padding-right:5px;'>" . $row['housingpref'];
+
+        //intern role
+        $result_string .= "<img src='images/job_trans.gif' style='height:15px; padding-left:20px;padding-right:5px;'>" . $row['internjob'];
+
         //add message button
         $result_string .= "<a href='https://www.facebook.com/dialog/send?to=" . $fbid . "&app_id=195569513923216&name=getsomeroom&link=https://getsomeroom.herokuapp.com&redirect_uri=https://getsomeroom.herokuapp.com'><img src='images/sendmessage.gif' align='right' style='height:35px;padding-right:30px;'></a>";
 

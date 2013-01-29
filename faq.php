@@ -59,7 +59,7 @@
         <p class="answer"> We provide you with a limited profile of the other user, so once you determine who you might be interested in rooming with, click the message button and get ready to meet new people! </p>
         
         <p class="lead">How can I ensure this site is safe?</p>
-        <p class="answer"> Our site uses the HTTPS protocol, which take advantage of SSL, a cryptographic protocol that provides security. We do not include your internship activity or company in the profile we display to other users. </p>
+        <p class="answer"> Our site uses the HTTPS protocol, which take advantage of SSL, a cryptographic protocol that provides security. </p>
         
         <br>
 

@@ -48,17 +48,17 @@
         <div style="padding-left: 200px; padding-right: 200px; font-weight: 900; overflow-y:auto; padding-top: 20px; width: auto; height: 500px; color:#FFFFFF;">
 
         <h2>FAQ</h2>
-        <p class="lead">What is the purpose of Get A Room?</p>
-        <p class="answer"> To meet new people who can possibly be your roomates for the summer! </p>
+        <p class="lead">What is the purpose of getsomeroom?</p>
+        <p class="answer"> To meet new people who can possibly be your roommates for the summer! We find you matches based on the city you're working in as well as other things you tell us in the survey.</p>
         
-        <p class="lead">What types of features are considered when matching roomates?</p>
-        <p class="answer">The city you will be interning in, gender and housing preferences, mutual friends, the specific parts of the city you would like to live in, as well as your interests. </p>
+        <p class="lead">What types of features are considered when matching roommates?</p>
+        <p class="answer">The city you will be interning in, gender and housing preferences, mutual friends, the specific parts of the city you would like to live in, your interests, and other things will all be taken into account. </p>
         
-        <p class="lead">What mediums are there for contacting potential roomates?</p>
-        <p class="answer"> We provide you with a limited profile of the other user. There is a messaging system on our site, should you be interested in contacting the person. </p>
+        <p class="lead">What do I do after I find my matches? </p>
+        <p class="answer"> We provide you with a limited profile of the other user, so once you determine who you might be interested in rooming with, click the message button and get ready to meet new people! </p>
         
         <p class="lead">How can I ensure this site is safe?</p>
-        <p class="answer"> We include logins via Facebook to ensure authentication and also provide a limited portion of your profile for others to view. We do not include your internship activity or company. </p>
+        <p class="answer"> Our site uses the HTTPS protocol, which take advantage of SSL, a cryptographic protocol that provides security. We do not include your internship activity or company in the profile we display to other users. </p>
         
         <a href="#myModal" role="button" class="btn" data-toggle="modal">Questions?</a>
          

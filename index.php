@@ -320,11 +320,12 @@ $.ajax({url:pageurl,success: function(data){
     <!-- IF USER IS NOT LOGGED IN SHOW LOGIN PAGE -->
     <?php } else { ?>
 
-      <div id="logincontainer" style="margin-right:300px;">
-        <h2 id="aTitle" style="font-weight:bold;">welcome to getsomeroom.</h2>
-        <p id="tagline">find roommates for the summer/winter wherever you intern. </p>  
+      <div id="logincontainer ">
         <div id="loginbox">
+          <h1 id="aTitle">get some room.</h1>
           <br>
+          <h2 id="caption">find an awesome internship but need roommates?</h2>
+          <p id="tagline">Enter to find your best roommate matches.</p>
           <!-- AddThis Button BEGIN -->
           <div id="login-flow" style="padding-left:30px;">
             <!-- <fb:login-button size="xlarge" perms="email,offline_access" show-faces="false" onlogin="Log.info('onlogin callback')" style="font-family:'Franklin Gothic Medium' background-color:#00009C;">

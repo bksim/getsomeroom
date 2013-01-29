@@ -73,22 +73,22 @@
 <td><form class ="navbar-form pull-left"name="form1" method="post" action="contact.php">
 <table width="100%" border="0" cellspacing="1" cellpadding="3">
 <tr>
-<td width="16%">Subject</td>
+<td width="16%">Subject      </td>
 <td width="2%">:</td>
 <td width="82%"><input name="subject" type="text" id="subject" size="50"></td>
 </tr>
 <tr>
-<td>Detail</td>
+<td>Detail      </td>
 <td>:</td>
 <td><textarea name="detail" cols="50" rows="4" id="detail"></textarea></td>
 </tr>
 <tr>
-<td>Name</td>
+<td>Name     </td>
 <td>:</td>
 <td><input name="name" type="text" id="name" size="50"></td>
 </tr>
 <tr>
-<td>Email</td>
+<td>Email     </td>
 <td>:</td>
 <td><input name="customer_mail" type="text" id="customer_mail" size="50"></td>
 </tr>

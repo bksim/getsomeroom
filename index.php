@@ -300,7 +300,7 @@ $.ajax({url:pageurl,success: function(data){
        <br>
        
        <h4>
-          <dl style="color: #FFFFFF; font-size: 14px;"> 
+          <dl style="color: #FFFFFF; font-size: 15px;"> 
             <dt style="color:#B23AEE;">Start searching by editing your profile.</dt>
             <dd>Click "edit profile" in the navigation bar to fill out some basic information about yourself. We'll use the information to search up the best matches for you.</dd>
               <br>
@@ -324,7 +324,7 @@ $.ajax({url:pageurl,success: function(data){
         <div id="loginbox">
           <h1 id="aTitle">get some room.</h1>
           <br>
-          <h2 id="caption">find an awesome internship but need roommates?</h2>
+          <h2 id="caption">found an internship but not roommates? #firstworldproblems</h2>
           <p id="tagline">Enter to find your best roommate matches.</p>
           <!-- AddThis Button BEGIN -->
           <div id="login-flow" style="padding-left:30px;">

@@ -37,7 +37,8 @@
         var geocoder1 = new google.maps.Geocoder();
         geocoder1.geocode( { 'address': city}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
-            //console.log(results[0].geometry.location)
+            console.log("here");
+            console.log(results[0].geometry.location);
             return results[0].geometry.location;
           } else {
             return "error";
@@ -56,7 +57,7 @@
         geocodecity("Chicago")
       ];
 
-      console.log(neighborhoods[0]);
+      console.log(geocodecity("Boston"));
       var markers = [];
       var iterator = 0;
       var map;

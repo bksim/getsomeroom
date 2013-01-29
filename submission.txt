@@ -17,6 +17,8 @@ Cycle.js was used to fade the background images in and out; it calculates the op
 
 The Facebook Javascript and PHP SDK's were also used (mostly the javascript sdk) to obtain data from the Facebook Graph API.
 
+The Google Maps javascript API was used to make a visualization of where users are interning.
+
 
 3) Please specify (for our convenience) which browser your site was developed for.
 The site is best viewed in Chrome (with appropriate zoom settings).

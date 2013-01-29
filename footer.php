@@ -1,1 +1,1 @@
-<div class="navbar navbar-fixed-bottom" style="color:#CCCCCC;">&copy; ava & brandon</div>
+<div class="navbar navbar-fixed-bottom" style="color:#CCCCCC;">&copy; coded by ava & brandon</div>

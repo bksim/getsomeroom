@@ -65,12 +65,8 @@
          
         <!-- Modal -->
         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">Modal header</h3>
-          </div>
+          <form name="contactform" method="post" action="contact.php">
           <div class="modal-body">
-            <form name="contactform" method="post" action="contact.php">
           <table width="450px">
             <tr>
           <td valign="top">
@@ -102,8 +98,8 @@
   </td>
     </tr>
         </table>
-        </form>
           </div>
+          <form name="contactform" method="post" action="contact.php">
           <div class="modal-footer">
             <button class="btn" input-type="submit" data-dismiss="modal" aria-hidden="true">Submit</button>
           </div>

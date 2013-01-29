@@ -87,7 +87,9 @@ if ($user_id) {
     <script type="text/javascript" src="javascript/jquery.cycle.all.js"></script> 
     <script src="javascript/bootstrap.min.js"></script>
 
-
+    <!-- maps -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <!-- testing cycle.js -->
     <script type="text/javascript">

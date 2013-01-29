@@ -11,13 +11,13 @@
 
     <script type="text/javascript">
       $('#main').css({opacity:1.0}); //makes map easier to read
-      var geocoder;
+      var geocoder = new google.maps.Geocoder();
 
       var neighborhoods = [
-        new google.maps.LatLng(42.3583, 71.0603),
-        new google.maps.LatLng(52.549061, 73),
-        new google.maps.LatLng(52.497622, 75),
-        new google.maps.LatLng(52.517683, 69)
+        new google.maps.LatLng(42.3583, -71.0603),
+        new google.maps.LatLng(52.549061, -73),
+        new google.maps.LatLng(52.497622, -75),
+        new google.maps.LatLng(52.517683, -69)
       ];
       var markers = [];
       var iterator = 0;
@@ -34,7 +34,7 @@
         map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
 
-        geocoder = new google.maps.Geocoder();
+        //geocoder = new google.maps.Geocoder();
 
         // set center to USA
         geocoder.geocode( { 'address': 'United States of America'}, function(results, status) {
@@ -78,6 +78,6 @@
       });
     </script>
 
-  <div id="map_container" style="opacity:">
+  <div id="map_container" style="padding-top:20px;">
     <div id="map_canvas" style="width:100%; height:100%"></div>
   </div>

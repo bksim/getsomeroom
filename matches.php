@@ -1,6 +1,3 @@
-
-
-
 <script> 
   // GET STUFF FROM FACEBOOK, MAKE AJAX CALL TO DATABASE
   FB.api('/me', function(response) {

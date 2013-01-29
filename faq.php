@@ -23,6 +23,7 @@
       .answer{
       	font-size: 15px;
         text-align: left;
+        font-style:normal;
       }
 
       /* Main marketing message and sign up button */
